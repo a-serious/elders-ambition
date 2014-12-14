@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>UI/Button.qml</file>
+        <file>UI/ButtonArea.qml</file>
+        <file>UI/DialogBox.qml</file>
+        <file>UI/MainWindowNew.qml</file>
+        <file>UI/MapCanvas.qml</file>
+    </qresource>
+</RCC>
