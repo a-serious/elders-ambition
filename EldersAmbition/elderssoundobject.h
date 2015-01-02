@@ -1,14 +1,14 @@
-#ifndef MAGICSOUNDOBJECT_H
-#define MAGICSOUNDOBJECT_H
+#ifndef ELDERSSOUNDOBJECT_H
+#define ELDERSSOUNDOBJECT_H
 
-#include "magicobject.h"
+#include "eldersobject.h"
 
-class MagicSoundObject : public MagicObject
+class EldersSoundObject : public EldersObject
 {
 public:
-    MagicSoundObject();
+    EldersSoundObject();
     virtual void play(int = 0) = 0;
     virtual void stop() = 0;
 };
 
-#endif // MAGICSOUNDOBJECT_H
+#endif // ELDERSSOUNDOBJECT_H

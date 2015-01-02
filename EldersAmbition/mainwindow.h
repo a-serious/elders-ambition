@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 
 #include "widget.h"
-#include "magicbacksound.h"
-#include "magicmap.h"
+#include "eldersbacksound.h"
+#include "eldersmap.h"
 #include "status.h"
 
 #include <QMainWindow>
@@ -33,7 +33,7 @@ private slots:
 public:
     MainWindow(QWidget *parent = 0);
     QTimer *timer;
-    MagicMap *getMap();
+    EldersMap *getMap();
     Widget *getWidget();
 
     ~MainWindow();

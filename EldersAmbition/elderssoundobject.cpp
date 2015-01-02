@@ -1,5 +1,5 @@
-#include "magicsoundobject.h"
+#include "elderssoundobject.h"
 
-MagicSoundObject::MagicSoundObject()
+EldersSoundObject::EldersSoundObject()
 {
 }

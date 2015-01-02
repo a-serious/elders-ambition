@@ -6,7 +6,7 @@
 #include <QQmlFileSelector>
 #include <QQuickView>
 
-#include "MagicExpression/magicexpression.h"
+#include "EldersExpression/eldersexpression.h"
 
 void test(MainWindow *pW)
 {
@@ -15,16 +15,21 @@ void test(MainWindow *pW)
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication app(argc,argv);
-    /*MainWindow w;
+    //QGuiApplication a(argc,argv);
+
+    QApplication a(argc, argv);
+
+    MainWindow w;
     w.show();
 
-    test(&w);*/
+    test(&w);
+
+    //return a.exec();
     /*QDeclarativeView view;
     QDeclarativeContext *context = view.rootContext();
     view.setSource(QUrl::fromLocalFile("MainWindowNew.qml"));
     view.show();*/
-    QQuickView view;\
+    /*QQuickView view;\
     if (qgetenv("QT_QUICK_CORE_PROFILE").toInt()) {\
         QSurfaceFormat f = view.format();\
         f.setProfile(QSurfaceFormat::CoreProfile);\
@@ -37,6 +42,13 @@ int main(int argc, char *argv[])
     view.setResizeMode(QQuickView::SizeRootObjectToView);\
     view.show();\
 
-    return app.exec();\
+    return app.exec();\*/
+
+    //QQuickView view;
+    //view.setSource(QUrl("qrc:/UI/MainWindowNew.qml"));
+    //view.show();
+    return a.exec();
+    //QObject *object = view.rootObject();
+
 }
 

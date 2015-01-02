@@ -1,25 +1,32 @@
 #include "widget.h"
-#include "magicmap.h"
+#include "eldersmap.h"
 
-#include "MagicAnimate/magicpopup.h"
-#include "MagicExpression/magicexpression.h"
+#include "EldersAnimate/elderspopup.h"
+#include "EldersExpression/eldersexpression.h"
 
 #include <QPainter>
 #include <QTimer>
 #include <QKeyEvent>
+#include <QQuickView>//ymj
+#include <QDeclarativeView>//ymj
 
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
 {
-    setFixedSize(400, 500);
-    mMap = new MagicMap();
+    setFixedSize(600, 550);//ymj
+
+    //QQuickView *View = new QQuickView;
+    //View->setSource(QUrl("qrc:/UI/MainWindowNew.qml"));
+    //View->show();
+
+    mMap = new EldersMap();
 
     mapToLoad = "";
     recToLoad = "";
     recToSave = "";
 }
 
-MagicMap *Widget::getMap()
+EldersMap *Widget::getMap()
 {
     return mMap;
 }
@@ -53,8 +60,8 @@ void Widget::animate()
             mMap->appendPopup("Map Load succeeded.", false);
         else
         {
-            MagicExpression::onList.clear();
-            MagicExpression::atList.clear();
+            EldersExpression::onList.clear();
+            EldersExpression::atList.clear();
             mMap->initialize();
             mMap->appendPopup("Bad Map. Info are shown in the console.", false);
         }
@@ -68,8 +75,8 @@ void Widget::animate()
             mMap->appendPopup("Record Load succeeded.", false);
         else
         {
-            MagicExpression::onList.clear();
-            MagicExpression::atList.clear();
+            EldersExpression::onList.clear();
+            EldersExpression::atList.clear();
             mMap->initialize();
             mMap->appendPopup("Bad Record. Info are shown in the console.", false);
         }
@@ -83,8 +90,8 @@ void Widget::animate()
             mMap->appendPopup("Record Saved succeeded.", false);
         else
         {
-            MagicExpression::onList.clear();
-            MagicExpression::atList.clear();
+            EldersExpression::onList.clear();
+            EldersExpression::atList.clear();
             mMap->initialize();
             mMap->appendPopup("Bad operation. Info are shown in the console.", false);
         }

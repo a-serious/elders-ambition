@@ -56,7 +56,7 @@ on(#dry)
 
 .hid->enabled = 0
 
-#dry->pix = "/Users/Kevin/Documents/temp/MagicTower/presentation/resources/drier.png"
+#dry->pix = "/Users/Kevin/Documents/temp/EldersTower/presentation/resources/drier.png"
 
 on(#to0)
 {

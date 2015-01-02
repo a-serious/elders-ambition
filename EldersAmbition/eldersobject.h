@@ -1,9 +1,9 @@
-#ifndef MAGICOBJECT_H
-#define MAGICOBJECT_H
+#ifndef ELDERSOBJECT_H
+#define ELDERSOBJECT_H
 
-class MagicMap;
+class EldersMap;
 
-#include "MagicExpression/magicvarient.h"
+#include "EldersExpression/eldersvarient.h"
 
 #include <QHash>
 #include <QSet>
@@ -11,26 +11,26 @@ class MagicMap;
 #include <QObject>
 #include <QTextStream>
 
-class MagicObject
+class EldersObject
 {
     QSet<QString> mClass;
 
 public:
-    MagicObject();
+    EldersObject();
 
-    QHash<QString, MagicVarient> property;
+    QHash<QString, EldersVarient> property;
 
     bool inClass(QString);
     bool inClass(QList<QString>);
     void appendClass(QString);
     void appendClass(QList<QString>);
 
-    virtual MagicVarient &operator[](QString);
-    virtual const MagicVarient &operator[](QString) const;
-    virtual void setProperty(QString, MagicVarient, bool = true);
+    virtual EldersVarient &operator[](QString);
+    virtual const EldersVarient &operator[](QString) const;
+    virtual void setProperty(QString, EldersVarient, bool = true);
 
     void saveProperty(QTextStream *);
-    void loadProperty(QTextStream *, MagicMap * = NULL);
+    void loadProperty(QTextStream *, EldersMap * = NULL);
 };
 
-#endif // MAGICOBJECT_H
+#endif // ELDERSOBJECT_H

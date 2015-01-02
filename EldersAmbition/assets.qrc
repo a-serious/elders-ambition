@@ -203,6 +203,11 @@
         <file>assets/Images/background.jpg</file>
         <file>assets/Images/buttonNormal.png</file>
         <file>assets/Images/buttonPressed.png</file>
+        <file>assets/Images/UIDesignV1.3.jpg</file>
+        <file>assets/Images/1.png</file>
+        <file>assets/Images/2.png</file>
+        <file>assets/Images/3.png</file>
+        <file>assets/Images/test50.jpg</file>
     </qresource>
     <qresource prefix="/sounds">
         <file>assets/Sounds/1.wav</file>

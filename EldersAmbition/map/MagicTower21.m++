@@ -122,7 +122,7 @@ enemy_28->exp = 2
 enemy_29->health = 50
 enemy_29->attack = 20
 enemy_29->defend = 1
-enemy_29->money = 1
+enemy_29->money = 100
 enemy_29->exp = 1
 
 enemy_25->health = 110
@@ -197,8 +197,8 @@ wisdomEnabled = 0
 teleportEnabled = 0
 
 tom->health = 1000
-tom->attack = 10
-tom->defend = 10
+tom->attack = 100000
+tom->defend = 100000
 
 
 at(3)

@@ -1,11 +1,11 @@
-#ifndef MAGICMAP_H
-#define MAGICMAP_H
+#ifndef ELDERSMAP_H
+#define ELDERSMAP_H
 
-#include "MagicDisplayObject/magicfloor.h"
-#include "MagicDisplayObject/magictom.h"
-#include "MagicDisplayObject/magicdisplayobject.h"
-#include "magicbacksound.h"
-#include "MagicAnimate/magicanimate.h"
+#include "EldersDisplayObject/eldersfloor.h"
+#include "EldersDisplayObject/elderstom.h"
+#include "EldersDisplayObject/eldersdisplayobject.h"
+#include "eldersbacksound.h"
+#include "EldersAnimate/eldersanimate.h"
 
 #include <QMutex>
 #include <QReadWriteLock>
@@ -17,14 +17,14 @@
 
 class KeyThread;
 
-class MagicMap : public MagicObject
+class EldersMap : public EldersObject
 {
     friend class Widget;
 
-    MagicTom *mTom;
+    EldersTom *mTom;
 
-    MagicFloor *floor[121];
-    MagicFloor *inventory[24];
+    EldersFloor *floor[121];
+    EldersFloor *inventory[24];
 
     QTimer *animateTimer;
 
@@ -38,15 +38,15 @@ class MagicMap : public MagicObject
 
 public:
     int animateFlag = 0;
-    QList<MagicAnimate *> animateList;
+    QList<EldersAnimate *> animateList;
     QReadWriteLock animateListLock;
 
-    MagicBackSound *mBackSound;
+    EldersBackSound *mBackSound;
 
     bool move(int, int); // direction
 
-    MagicMap();
-    QList<MagicDisplayObject *> displayList;
+    EldersMap();
+    QList<EldersDisplayObject *> displayList;
 
     bool loadMap(QString = "");
     bool saveRecord(QFile * = NULL);
@@ -57,20 +57,20 @@ public:
     void keyPressEvent(QKeyEvent *);
 
     void appendPopup(QString, bool = false);
-    void appendAnimate(MagicAnimate *, bool);
-    void appendObject(MagicDisplayObject *);
+    void appendAnimate(EldersAnimate *, bool);
+    void appendObject(EldersDisplayObject *);
 
     void appendSound(QString);
 
-    QList<MagicObject *> findDisplayObject(QString, QString, QList<QString>);
+    QList<EldersObject *> findDisplayObject(QString, QString, QList<QString>);
 
-    virtual void setProperty(QString, MagicVarient, bool = true);
+    virtual void setProperty(QString, EldersVarient, bool = true);
     //bool eraseMapObject(QString, int, int);
 
     void setPath(QString);
     QString getResource(QString);
 
-    MagicTom *Tom();
+    EldersTom *Tom();
 };
 
-#endif // MAGICMAP_H
+#endif // ELDERSMAP_H

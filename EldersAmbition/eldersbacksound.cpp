@@ -1,6 +1,6 @@
-#include "magicbacksound.h"
+#include "eldersbacksound.h"
 
-MagicBackSound::MagicBackSound()
+EldersBackSound::EldersBackSound()
 {
     mSound[0] = new QSound(":/sounds/back_0");
     mSound[1] = new QSound(":/sounds/back_1");
@@ -10,14 +10,14 @@ MagicBackSound::MagicBackSound()
     now = 1;
 }
 
-void MagicBackSound::play(int loop) // default: 0
+void EldersBackSound::play(int loop) // default: 0
 {
     if (loop <= 0) loop = 2147483647; // wtf
     //mSound[w]->play();
     mSound[now]->setLoops(loop);
 }
 
-void MagicBackSound::change(int target)
+void EldersBackSound::change(int target)
 {
     soundMutex.lock();
     if (now != target)
@@ -30,7 +30,7 @@ void MagicBackSound::change(int target)
     soundMutex.unlock();
 }
 
-void MagicBackSound::stop()
+void EldersBackSound::stop()
 {
     try
     {

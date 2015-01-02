@@ -1,34 +1,34 @@
-#include "magicobject.h"
-#include "MagicExpression/magicvarient.h"
-#include "magicmap.h"
+#include "eldersobject.h"
+#include "EldersExpression/eldersvarient.h"
+#include "eldersmap.h"
 
 #include <QDebug>
 
-MagicObject::MagicObject()
+EldersObject::EldersObject()
 {
 }
 
-MagicVarient &MagicObject::operator[](QString propertyName)
+EldersVarient &EldersObject::operator[](QString propertyName)
 {
     return property[propertyName];
 }
 
-const MagicVarient &MagicObject::operator[](QString propertyName) const
+const EldersVarient &EldersObject::operator[](QString propertyName) const
 {
     return property.find(propertyName).value();
 }
 
-void MagicObject::setProperty(QString propertyName, MagicVarient propertyValue, bool)
+void EldersObject::setProperty(QString propertyName, EldersVarient propertyValue, bool)
 {
     property[propertyName] = propertyValue;
 }
 
-bool MagicObject::inClass(QString c)
+bool EldersObject::inClass(QString c)
 {
     return mClass.contains(c);
 }
 
-bool MagicObject::inClass(QList<QString> c)
+bool EldersObject::inClass(QList<QString> c)
 {
     for (auto i = c.begin(); i != c.end(); i++)
         if (!mClass.contains(*i))
@@ -36,49 +36,49 @@ bool MagicObject::inClass(QList<QString> c)
     return true;
 }
 
-void MagicObject::appendClass(QList<QString> c)
+void EldersObject::appendClass(QList<QString> c)
 {
     for (auto i = c.begin(); i != c.end(); i++)
         mClass.insert(*i);
 }
 
-void MagicObject::appendClass(QString c)
+void EldersObject::appendClass(QString c)
 {
     mClass.insert(c);
 }
 
-void MagicObject::saveProperty(QTextStream *out)
+void EldersObject::saveProperty(QTextStream *out)
 {
     *out << property.size() << endl;
-    for (QHash<QString, MagicVarient>::iterator i = property.begin(); i != property.end(); i++)
+    for (QHash<QString, EldersVarient>::iterator i = property.begin(); i != property.end(); i++)
         *out << i.key() << ':' << i.value().getOutput() << endl;
 }
 
 /*
-void MagicObject::loadProperty(QTextStream *in, MagicMap *map)
+void EldersObject::loadProperty(QTextStream *in, EldersMap *map)
 {
     int length = in->readLine().toInt();
     for (int i = 0; i < length; i++)
     {
         QRegExp rx("^(.*):(.*)$");
         rx.indexIn(in->readLine());
-        property[rx.cap(1)] = MagicVarient::setInput(rx.cap(2));
+        property[rx.cap(1)] = EldersVarient::setInput(rx.cap(2));
         if (rx.cap(1) == "picked" && rx.cap(2) != "0")
-            map->Tom()->inventory.push_back(dynamic_cast<MagicDisplayObject *>(this));
+            map->Tom()->inventory.push_back(dynamic_cast<EldersDisplayObject *>(this));
         else if (rx.cap(1) == "position_x")
-            dynamic_cast<MagicDisplayObject *>(this)->x = rx.cap(2).toInt() * 32;
+            dynamic_cast<EldersDisplayObject *>(this)->x = rx.cap(2).toInt() * 32;
         else if (rx.cap(1) == "position_y")
-            dynamic_cast<MagicDisplayObject *>(this)->y = rx.cap(2).toInt() * 32;
+            dynamic_cast<EldersDisplayObject *>(this)->y = rx.cap(2).toInt() * 32;
     }
 }*/
 
-void MagicObject::loadProperty(QTextStream *in, MagicMap *)
+void EldersObject::loadProperty(QTextStream *in, EldersMap *)
 {
     int length = in->readLine().toInt();
     for (int i = 0; i < length; i++)
     {
         QRegExp rx("^(\\w*):(.*)$");
         rx.indexIn(in->readLine());
-        setProperty(rx.cap(1), MagicVarient::setInput(rx.cap(2)));
+        setProperty(rx.cap(1), EldersVarient::setInput(rx.cap(2)));
     }
 }

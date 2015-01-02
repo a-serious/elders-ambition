@@ -2,7 +2,7 @@
 #ifndef WIDGET_H
 #define WIDGET_H
 
-#include "magicmap.h"
+#include "eldersmap.h"
 
 #include <QWidget>
 #include <QString>
@@ -14,7 +14,7 @@ class Widget : public QWidget
 public:
     Widget(QWidget *parent);
     void keyPressEvent(QKeyEvent *);
-    MagicMap *getMap();
+    EldersMap *getMap();
     void loadMap(QString);
     void saveRec(QString);
     void loadRec(QString);
@@ -26,7 +26,7 @@ protected:
     void paintEvent(QPaintEvent *event);
 
 private:
-    MagicMap *mMap;
+    EldersMap *mMap;
     QString mapToLoad;
     QString recToLoad;
     QString recToSave;

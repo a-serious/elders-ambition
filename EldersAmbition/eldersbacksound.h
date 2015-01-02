@@ -1,22 +1,22 @@
-#ifndef MAGICBACKSOUND_H
-#define MAGICBACKSOUND_H
+#ifndef ELDERSBACKSOUND_H
+#define ELDERSBACKSOUND_H
 
-#include "magicsoundobject.h"
+#include "elderssoundobject.h"
 
 #include <QtMultimedia/QSound>
 #include <QMutex>
 
-class MagicBackSound : public MagicSoundObject
+class EldersBackSound : public EldersSoundObject
 {
     QSound *mSound[5];
     int now;
     QMutex soundMutex;
 
 public:
-    MagicBackSound();
+    EldersBackSound();
     virtual void play(int = 0);
     virtual void stop();
     void change(int);
 };
 
-#endif // MAGICBACKSOUND_H
+#endif // ELDERSBACKSOUND_H
