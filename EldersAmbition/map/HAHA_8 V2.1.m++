@@ -1,4 +1,4 @@
-enemy_9->health = 2500
+﻿enemy_9->health = 2500
 enemy_9->attack = 900
 enemy_9->defend = 850
 enemy_9->money = 84
