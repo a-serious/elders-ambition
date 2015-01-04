@@ -36,6 +36,7 @@ void PropertyWidget::paintEvent(QPaintEvent *)
     painter.drawText(10, 75, QString("防御: ") + QString::number((*mMap->Tom())["defend"].getInt()));
     painter.drawText(10, 95, QString("经验: ") + QString::number((*mMap->Tom())["exp"].getInt()));
     painter.drawText(10, 115, QString("金钱: ") + QString::number((*mMap->Tom())["money"].getInt()));
+    painter.drawText(10, 135, QString("人民币: ") + QString::number((*mMap->Tom())["RMB"].getInt()));
 
     painter.end();
 }
