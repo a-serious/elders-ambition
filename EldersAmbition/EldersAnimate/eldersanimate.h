@@ -7,7 +7,7 @@ class EldersMap;
 #include <QMutex>
 #include <QPainter>
 
-#include "../EldersDisplayObject/eldersdisplayobject.h"
+#include "./EldersDisplayObject/eldersdisplayobject.h"
 
 class EldersAnimate : public QWaitCondition, public QMutex
 {
