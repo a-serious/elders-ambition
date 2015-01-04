@@ -1,36 +1,36 @@
 ﻿enemy_9->health = 2500
-enemy_9->attack = 800
-enemy_9->defend = 700
+enemy_9->attack = 900
+enemy_9->defend = 850
 enemy_9->money = 84
 enemy_9->exp = 75
 //地底小怪
 
-enemy_31->health = 3000
-enemy_31->attack = 800
-enemy_31->defend = 700
+enemy_31->health = 30000
+enemy_31->attack = 1700
+enemy_31->defend = 2200
 enemy_31->money = 250
 enemy_31->exp = 220
 //最终大BOSS
 
-enemy_2->health = 900
-enemy_2->attack = 70
-enemy_2->defend = 60
-enemy_2->money = 65
-enemy_2->exp = 65
+enemy_2->health = 1500
+enemy_2->attack = 560
+enemy_2->defend = 460
+enemy_2->money = 60
+enemy_2->exp = 60
 //第四层的小BOSS
 
-enemy_3->health = 700
-enemy_3->attack = 35
-enemy_3->defend = 35
+enemy_3->health = 1250
+enemy_3->attack = 500
+enemy_3->defend = 400
 enemy_3->money = 55
 enemy_3->exp = 55
 //第五层的小BOSS
 
-enemy_4->health = 800
-enemy_4->attack = 60
-enemy_4->defend = 50
-enemy_4->money = 60
-enemy_4->exp = 60
+enemy_4->health = 1200
+enemy_4->attack = 620
+enemy_4->defend = 520
+enemy_4->money = 65
+enemy_4->exp = 75
 //第一层的小BOSS
 
 enemy_5->health = 600
@@ -40,31 +40,31 @@ enemy_5->money = 50
 enemy_5->exp = 50
 //第三层的小BOSS
 
-enemy_10->health = 1100
-enemy_10->attack = 120
-enemy_10->defend = 80
-enemy_10->money = 75
-enemy_10->exp = 75
+enemy_10->health = 2000
+enemy_10->attack = 680
+enemy_10->defend = 590
+enemy_10->money = 70
+enemy_10->exp = 65
 //第六层的小BOSS
 
-enemy_12->health = 1300
-enemy_12->attack = 150
-enemy_12->defend = 100
+enemy_12->health = 1200
+enemy_12->attack = 980
+enemy_12->defend = 900
 enemy_12->money = 88
-enemy_12->exp = 85
+enemy_12->exp = 75
 //第八层的小BOSS
 
-enemy_13->health = 1200
-enemy_13->attack = 130
-enemy_13->defend = 90
+enemy_13->health = 1500
+enemy_13->attack = 830
+enemy_13->defend = 730
 enemy_13->money = 80
-enemy_13->exp = 80
+enemy_13->exp = 70
 //第二层的小BOSS
 
-enemy_15->health = 1000
-enemy_15->attack = 90
-enemy_15->defend = 60
-enemy_15->money = 70
+enemy_15->health = 900
+enemy_15->attack = 750
+enemy_15->defend = 650
+enemy_15->money = 77
 enemy_15->exp = 70
 //第七层的小BOSS
 
@@ -159,7 +159,7 @@ enemy_17->money = 47
 enemy_17->exp = 45
 
 enemy_18->health = 700
-enemy_18->attack = 210
+enemy_18->attack = 250
 enemy_18->defend = 125
 enemy_18->money = 32
 enemy_18->exp = 30
@@ -177,8 +177,8 @@ enemy_11->money = 20
 enemy_11->exp = 17
 
 enemy_19->health = 1300
-enemy_19->attack = 240
-enemy_19->defend = 125
+enemy_19->attack = 300
+enemy_19->defend = 150
 enemy_19->money = 40
 enemy_19->exp = 35
 
@@ -1134,9 +1134,9 @@ on(enemy_31.f19)
 	message = "魔王: 你还差得远呢!"
 	if(return == 1)
 	{
-                enemy_31->health = 3000
-                enemy_31->attack = 800
-                enemy_31->defend = 700
+		enemy_31->health = 30000
+		enemy_31->attack = 1700
+		enemy_31->defend = 1500
 		enemy_31->money = 250
 		enemy_31->exp = 220
 	}
