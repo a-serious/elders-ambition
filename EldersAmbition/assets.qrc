@@ -164,8 +164,16 @@
         <file alias="merchant_6.1">assets/Images/748.png</file>
         <file alias="enemy_30.0">assets/Images/771.bmp</file>
         <file alias="enemy_30.1">assets/Images/773.bmp</file>
-        <file alias="enemy_31.0">assets/Images/781.bmp</file>
-        <file alias="enemy_31.1">assets/Images/783.bmp</file>
+        <file alias="enemy_31.0">assets/Images/786.png</file>
+        <file alias="enemy_31.1">assets/Images/787.png</file>
+        <file alias="enemy_31.00">assets/Images/788.png</file>
+        <file alias="enemy_31.01">assets/Images/789.png</file>
+        <file alias="enemy_31.02">assets/Images/790.png</file>
+        <file alias="enemy_31.10">assets/Images/791.png</file>
+        <file alias="enemy_31.11">assets/Images/792.png</file>
+        <file alias="enemy_31.12">assets/Images/793.png</file>
+        <file alias="enemy_31.20">assets/Images/794.png</file>
+        <file alias="enemy_31.22">assets/Images/795.png</file>
         <file>assets/Images/878.jpg</file>
         <file>assets/Images/880.jpg</file>
         <file>assets/Images/882.jpg</file>

@@ -79,6 +79,17 @@ int EldersEnemy::damage(EldersMap *map)
 void EldersEnemy::paint(QPainter *painter)
 {
     painter->drawPixmap(x, y, cnt-- > 10 ? *pix[0] : *pix[1]);
+    if (property["label"].getString() == "enemy_31")
+        {
+            painter->drawPixmap(x-50, y-100, QPixmap(":/images/enemy_31.00"));
+            painter->drawPixmap(x, y-100, QPixmap(":/images/enemy_31.01"));
+            painter->drawPixmap(x+50, y-100, QPixmap(":/images/enemy_31.02"));
+            painter->drawPixmap(x-50, y-50, QPixmap(":/images/enemy_31.10"));
+            painter->drawPixmap(x, y-50, QPixmap(":/images/enemy_31.11"));
+            painter->drawPixmap(x+50, y-50, QPixmap(":/images/enemy_31.12"));
+            painter->drawPixmap(x-50, y, QPixmap(":/images/enemy_31.20"));
+            painter->drawPixmap(x+50, y, QPixmap(":/images/enemy_31.22"));
+        }
     if (cnt <= 0) cnt = 20;
 }
 
