@@ -1,172 +1,16 @@
-at(-1)
-aw_2	aw_1	aw_1	aw_1	aw_1	aw_1	aw_1	aw_1	aw_1	aw_1	aw_2
-aw_2	aw_1	aw_1	aw_1	.	.	.	aw_1	aw_1	aw_1	aw_2
-aw_2	aw_1	aw_1	aw_1	.	.	.	aw_1	aw_1	aw_1	aw_2
-aw_2	aw_1	aw_1	aw_1	.	e_31	.	aw_1	aw_1	aw_1	aw_2
-aw_2	aw_1	aw_1	aw_1	aw_1	e_9	aw_1	aw_1	aw_1	aw_1	aw_2
-aw_2	aw_1	m_2	m_2	m_2	e_9	m_2	m_2	m_2	aw_1	aw_2
-aw_2	aw_1	aw_1	aw_1	aw_1	e_9	aw_1	aw_1	aw_1	aw_1	aw_2
-aw_2	aw_2	aw_2	m_2	e_9	e_9	e_9	m_2	aw_2	aw_2	aw_2
-aw_2	aw_2    aw_2	aw_2	aw_2	e_9	aw_2	aw_2	aw_2	aw_2	aw_2
-aw_2	aw_2	aw_2	aw_2	m_2	e_9   	m_2	aw_2	aw_2	aw_2	aw_2
-aw_2	aw_2	aw_2	aw_2	aw_2	d_1	aw_2	aw_2	aw_2	aw_2	aw_2
-
 enemy_9->health = 2500
 enemy_9->attack = 900
 enemy_9->defend = 850
 enemy_9->money = 84
 enemy_9->exp = 75
+//地底小怪
 
-at(0)
-w	aw_1	aw_1	aw_1	aw_1	up	aw_1	aw_1	aw_1	aw_1	w
-w	aw_1	aw_1	aw_1	aw_1	d_1	aw_1	aw_1	aw_1	aw_1	w
-w	aw_1	aw_1	aw_1	aw_1	.	aw_1	aw_1	aw_1	aw_1	w
-w	aw_1	aw_1	aw_1	aw_1	.	aw_1	aw_1	aw_1	aw_1	w
-w	aw_1	aw_1	aw_1	aw_1	k_2.ini	aw_1	aw_1	aw_1	aw_1	w
-w	aw_1	aw_1	aw_1	aw_1	k_1.ini	aw_1	aw_1	aw_1	aw_1	w
-w	w	aw_1	aw_1	aw_1	k_0.ini	aw_1	aw_1	aw_1	w	w
-w	w	w	w	w	dr_0.	w	w	w	w	w
-aw_2	w	aw_2	w	.	me_4#fairy	me_6.f0	w	aw_2	w	aw_2
-aw_2	aw_2	aw_2	aw_2	aw_2	t	aw_2	aw_2	aw_2	aw_2	aw_2
-aw_2	aw_2	aw_2	aw_2	aw_2	dn	aw_2	aw_2	aw_2	aw_2	aw_2
-
-#fairy->state = 0
-on (#fairy)
-{
-	if(this->state == 0)
-	{
-		message = "勇士: ......"
-		message = "仙子: 你醒了!"
-		message = "勇士: 你是谁?我在哪里?"
-		message = "仙子: 我是这里的仙子,刚才被小怪打晕了."
-		message = "勇士: ...剑!我的剑呢?"
-		message = "仙子: 你的剑被他们抢走了."
-		message = "仙子: 我只来得及把你救出来."
-		message = "勇士: 那公主呢?我是来救公主的."
-		message = "仙子: 公主还在里面,你这样进去是打不过小怪的."
-		message = "勇士: 那我咋办呢?"
-		message = "勇士: 我答应过王一定要把公主救出来..."
-		message = "仙子: 放心吧,我借给你力量"
-		message = "仙子: 你就可以打赢那些小怪了."
-		message = "仙子: 不过你得帮我找样东西."
-		message = "勇士: 什么东西?"
-		message = "仙子: 是一个十字架,中间有红色的宝石."
-		message = "勇士: 那东西有什么用吗?"
-		message = "仙子: 我本是这座塔的守护者,"
-		message = "仙子: 从北方来了一批恶魔,"
-		message = "仙子: 他们占领了这座塔,"
-		message = "仙子: 并将我的魔力封在了十字架里."
-		message = "仙子: 如果你能把它带来,"
-		message = "仙子: 那我的魔力就能慢慢恢复,"
-		message = "仙子: 然后就能借你力量救出公主了!"
-		message = "仙子: 要记住,只有用我的魔力才能打开21层的门."
-		message = "勇士: 好吧...我试试看."
-		message = "仙子: 刚才我看过了,"
-		message = "仙子: 你的剑在三楼,盾在五楼."
-		message = "仙子: 十字架在七楼."
-		message = "勇士: 那我要怎么开门呢?"
-		message = "仙子: 我这里有三把钥匙, 你先拿去."
-		message = "仙子: 在塔里面还有很多这种钥匙,你要珍惜使用."
-		message = "仙子: 勇敢的去吧勇士!!"
-		this->position_x = 4
-		this->state = 1
-	}
-	if(this->state == 2)
-	{
-		message = "勇士: 看我找到了什么~ 你的十字架!"
-		message = "仙子: 太好啦! 那么按照约定,我将给予你打败魔王的力量."
-		message = "仙子: 般若波罗蜜~"
-		tom->health = tom->health * 4 / 3
-		tom->attack = tom->attack * 4 / 3
-		tom->defend = tom->defend * 4 / 3
-		message = "仙子: 切记, 没有十足的把握不要挑战大魔王!"
-		#up.f20->enabled = 1
-                        this->state = 3
-	}
-}
-
-.ini->pick = 1
-.ini->enabled = 0
-
-enemy_27->health = 100
-enemy_27->attack = 20
-enemy_27->defend = 5
-enemy_27->money = 3
-enemy_27->exp = 3
-
-at(1)
-up	d_1	.	.	.	.	.	.	.	.	.
-w	w	w	w	k_0	w	w	w	w	w	.
-m_1	.	e_25	dr_0	.	w	m_1	k_0	m_1	w	.
-k_0	e_25	m_3	w	.	w	m_1	k_0	m_1	w	.
-w	dr_0	w	w	e_29	w	e_26	w	w	w	.
-k_0	e_24	.	w	e_28	w	e_27	e_29	e_8	dr_0	.
-m_4	.	k_1	w	e_29	w	w	w	w	w	.
-w	dr_0	w	w	.	.	.	.	dr_1	.	.
-.	e_24	.	w	w	dr_2	w	w	w	dr_0	w
-m_1	m_2	k_0	w	k_2	d_0	.	w	k_0	e_4	k_1
-m_1	wi	k_0	w	.	dn	.	w	k_0	me_1.f1	k_0
-
-medicine_1->health = 200
-
-medicine_2->health = 500
-
-medicine_4->defend = 3
-medicine_3->attack = 3
-
-enemy_23->health = 300
-enemy_23->attack = 75
-enemy_23->defend = 45
-enemy_23->money = 13
-enemy_23->exp = 10
-
-enemy_16->health = 850
-enemy_16->attack = 350
-enemy_16->defend = 200
-enemy_16->money = 45
-enemy_16->exp = 40
-
-enemy_28->health = 70
-enemy_28->attack = 15
-enemy_28->defend = 2
-enemy_28->money = 2
-enemy_28->exp = 2
-
-enemy_29->health = 50
-enemy_29->attack = 20
-enemy_29->defend = 1
-enemy_29->money = 1
-enemy_29->exp = 1
-
-enemy_25->health = 110
-enemy_25->attack = 25
-enemy_25->defend = 5
-enemy_25->money = 5
-enemy_25->exp = 4
-
-enemy_14->health = 400
-enemy_14->attack = 90
-enemy_14->defend = 50
-enemy_14->money = 15
-enemy_14->exp = 12
-
-enemy_8->health = 125
-enemy_8->attack = 50
-enemy_8->defend = 25
-enemy_8->money = 10
-enemy_8->exp = 7
-
-enemy_21->health = 150
-enemy_21->attack = 65
-enemy_21->defend = 30
-enemy_21->money = 10
-enemy_21->exp = 8
-
-enemy_26->health = 200
-enemy_26->attack = 35
-enemy_26->defend = 10
-enemy_26->money = 5
-enemy_26->exp = 5
+enemy_31->health = 30000
+enemy_31->attack = 1700
+enemy_31->defend = 2200
+enemy_31->money = 250
+enemy_31->exp = 220
+//最终大BOSS
 
 enemy_2->health = 1500
 enemy_2->attack = 560
@@ -224,6 +68,268 @@ enemy_15->money = 77
 enemy_15->exp = 70
 //第七层的小BOSS
 
+enemy_23->health = 300
+enemy_23->attack = 75
+enemy_23->defend = 45
+enemy_23->money = 13
+enemy_23->exp = 10
+
+enemy_27->health = 100
+enemy_27->attack = 20
+enemy_27->defend = 5
+enemy_27->money = 3
+enemy_27->exp = 3
+
+enemy_16->health = 850
+enemy_16->attack = 350
+enemy_16->defend = 200
+enemy_16->money = 45
+enemy_16->exp = 40
+
+enemy_28->health = 70
+enemy_28->attack = 15
+enemy_28->defend = 2
+enemy_28->money = 2
+enemy_28->exp = 2
+
+enemy_29->health = 50
+enemy_29->attack = 20
+enemy_29->defend = 1
+enemy_29->money = 1
+enemy_29->exp = 1
+
+enemy_25->health = 110
+enemy_25->attack = 25
+enemy_25->defend = 5
+enemy_25->money = 5
+enemy_25->exp = 4
+
+enemy_14->health = 400
+enemy_14->attack = 90
+enemy_14->defend = 50
+enemy_14->money = 15
+enemy_14->exp = 12
+
+enemy_8->health = 125
+enemy_8->attack = 50
+enemy_8->defend = 25
+enemy_8->money = 10
+enemy_8->exp = 7
+
+enemy_21->health = 150
+enemy_21->attack = 65
+enemy_21->defend = 30
+enemy_21->money = 10
+enemy_21->exp = 8
+
+enemy_26->health = 200
+enemy_26->attack = 35
+enemy_26->defend = 10
+enemy_26->money = 5
+enemy_26->exp = 5
+
+enemy_20->health = 550
+enemy_20->attack = 160
+enemy_20->defend = 90
+enemy_20->money = 25
+enemy_20->exp = 20
+
+enemy_22->health = 450
+enemy_22->attack = 150
+enemy_22->defend = 90
+enemy_22->money = 22
+enemy_22->exp = 19
+
+enemy_24->health = 150
+enemy_24->attack = 40
+enemy_24->defend = 20
+enemy_24->money = 8
+enemy_24->exp = 6
+
+enemy_7->health = 100
+enemy_7->attack = 200
+enemy_7->defend = 110
+enemy_7->money = 30
+enemy_7->exp = 25
+
+enemy_17->health = 500
+enemy_17->attack = 400
+enemy_17->defend = 260
+enemy_17->money = 47
+enemy_17->exp = 45
+
+enemy_18->health = 700
+enemy_18->attack = 250
+enemy_18->defend = 125
+enemy_18->money = 32
+enemy_18->exp = 30
+
+enemy_6->health = 500
+enemy_6->attack = 115
+enemy_6->defend = 65
+enemy_6->money = 15
+enemy_6->exp = 15
+
+enemy_11->health = 250
+enemy_11->attack = 120
+enemy_11->defend = 70
+enemy_11->money = 20
+enemy_11->exp = 17
+
+enemy_19->health = 1300
+enemy_19->attack = 300
+enemy_19->defend = 150
+enemy_19->money = 40
+enemy_19->exp = 35
+
+at(-1)
+aw_2	aw_1	aw_1	aw_1	aw_1	aw_1	aw_1	aw_1	aw_1	aw_1	aw_2
+aw_2	aw_1	aw_1	aw_1	.	.	.	aw_1	aw_1	aw_1	aw_2
+aw_2	aw_1	aw_1	aw_1	.	.	.	aw_1	aw_1	aw_1	aw_2
+aw_2	aw_1	aw_1	aw_1	.	e_31#boss	.	aw_1	aw_1	aw_1	aw_2
+aw_2	aw_1	aw_1	aw_1	aw_1	e_9	aw_1	aw_1	aw_1	aw_1	aw_2
+aw_2	aw_1	m_2	m_2	m_2	e_9	m_2	m_2	m_2	aw_1	aw_2
+aw_2	aw_1	aw_1	aw_1	aw_1	e_9	aw_1	aw_1	aw_1	aw_1	aw_2
+aw_2	aw_2	aw_2	m_2	e_9	e_9	e_9	m_2	aw_2	aw_2	aw_2
+aw_2	aw_2    aw_2	aw_2	aw_2	e_9	aw_2	aw_2	aw_2	aw_2	aw_2
+aw_2	aw_2	aw_2	aw_2	m_2	e_9   	m_2	aw_2	aw_2	aw_2	aw_2
+aw_2	aw_2	aw_2	aw_2	aw_2	d_1	aw_2	aw_2	aw_2	aw_2	aw_2
+
+at(0)
+w	aw_1	aw_1	aw_1	aw_1	up	aw_1	aw_1	aw_1	aw_1	w
+w	aw_1	aw_1	aw_1	aw_1	d_1	aw_1	aw_1	aw_1	aw_1	w
+w	aw_1	aw_1	aw_1	aw_1	.	aw_1	aw_1	aw_1	aw_1	w
+w	aw_1	aw_1	aw_1	aw_1	.	aw_1	aw_1	aw_1	aw_1	w
+w	aw_1	aw_1	aw_1	aw_1	k_2.ini	aw_1	aw_1	aw_1	aw_1	w
+w	aw_1	aw_1	aw_1	aw_1	k_1.ini	aw_1	aw_1	aw_1	aw_1	w
+w	w	aw_1	aw_1	aw_1	k_0.ini	aw_1	aw_1	aw_1	w	w
+w	w	w	w	w	dr_0.	w	w	w	w	w
+aw_2	w	aw_2	w	.	me_4#fairy	me_6#xz	w	aw_2	w	aw_2
+aw_2	aw_2	aw_2	aw_2	aw_2	t	aw_2	aw_2	aw_2	aw_2	aw_2
+aw_2	aw_2	aw_2	aw_2	aw_2	dn#dn.f0	aw_2	aw_2	aw_2	aw_2	aw_2
+
+#fairy->state = 0
+#xz->state = 0
+#dn.f0->enabled = 0
+
+on (#fairy)
+{
+	if(this->state == 0)
+	{
+                message = "学生: ．．．．．．"
+                message = "长者: 你醒了！"
+                message = "学生: 你是谁？我在哪里？"
+                message = "长者: 我是长者,你被我召唤到此地．"
+                message = "学生: 卧槽，你一定是在逗我"
+                message = "长者: 没有，虽然你很ｎａｉｖｅ"
+                message = "长者: 清华的软工世界需要你来续一秒"
+                message = "学生: 额。。。真的？"
+                message = "长者: 没错，而且中央也很支持你。"
+                message = "学生: 好吧，苟利国家生死以，岂因祸福避趋之"
+                message = "学生: 我也不知道我一个学生怎么就变成这样了"
+                message = "长者: 放心吧,我会让你闷声发大财，"
+                message = "长者: 那样你就可以拯救世界了。"
+                message = "长者: 不过你得帮我找样东西。"
+                message = "学生: 什么东西？"
+                message = "长者: 我的眼镜。"
+                message = "学生: 那东西有什么用吗？"
+                message = "长者: 有了那个东西我就能恢复原样。"
+                message = "长者: 现在的我有些力不从心啊"
+                message = "长者: 话说回来我需要传授你一些人生经验"
+                message = "长者: 血太少了，你就会干不过怪物"
+                message = "长者: 你的攻击越高，就能够对于怪物杀伤越大"
+                message = "长者: 防御越高，怪物的攻击就越弱"
+                message = "长者: 你和怪物轮流攻击对方，伤害就是攻防的差值"
+                message = "长者: 要记住，不断提升自己的攻防"
+                message = "学生: 好吧．．．我试试看。"
+                message = "长者: 对了提醒一下"
+                message = "长者: 在三楼有键盘，在五楼有显示器，大幅提升攻防"
+                message = "长者: 我的眼镜在七楼"
+                message = "学生: 那我要怎么开门呢？"
+                message = "长者: 我这里有三个鼠标, 鼠标就能开门。"
+                message = "长者: 在这世界里面还有很多这种鼠标,你要珍惜使用。"
+                message = "长者: 勇敢的少年啊快去创造奇迹！！"
+		this->position_x = 4
+		this->state = 1
+	}
+	if(this->state == 2)
+	{
+                message = "学生: 看我找到了什么~ 你的眼镜!"
+                message = "长者: 吼啊，我会给你新的力量"
+                message = "长者: 跑得比谁都快！"
+		tom->health = tom->health * 4 / 3
+		tom->attack = tom->attack * 4 / 3
+		tom->defend = tom->defend * 4 / 3
+                #fairy->pix = ":/images/teleport"
+                message = "长者: 不要ｔｏｏ　ｙｏｕｎｇ！"
+                #dn.f0->enabled = 1
+                this->state = 3
+	}
+}
+
+on(#xz)
+{
+        if(this->state == 8)
+        {
+                message = "校长：恭喜你收集八样宝物，我将给你真·软件工程！"
+                tom->health = tom->health + 5000
+                tom->attack = tom->attack + 500
+                tom->defend = tom->defend + 500
+                #snow->pick = 1
+        }
+        else
+        {
+                message = "校长：抱歉，你还没有收集八样宝物"
+                message = "请收集软件工程中必要的八个东西后再来找我"
+        }
+}
+
+.ini->pick = 1
+.ini->enabled = 0
+
+medicine_1->health = 200
+medicine_2->health = 500
+medicine_4->defend = 3
+medicine_3->attack = 3
+
+tom->health = 1000
+tom->attack = 10000
+tom->defend = 10000
+
+wisdomEnabled = 0
+teleportEnabled = 1
+
+at(1)
+up	d_1	.	.	.	.	.	.	.	.	.
+w	w	w	w	k_0	w	w	w	w	w	.
+m_1	.	e_25	dr_0	.	w	m_1	k_0	m_1	w	.
+k_0	e_25	m_3	w	.	w	m_1	k_0	m_1	w	.
+w	dr_0	w	w	e_29	w	e_26	w	w	w	.
+k_0	e_24	.	w	e_28	w	e_27	e_29	e_8	dr_0	.
+m_4	.	k_1	w	e_29	w	w	w	w	w	.
+w	dr_0	w	w	.	.	.	.	dr_1	.	.
+.	e_24	.	w	w	dr_2	w	w	w	dr_0	w
+m_1	m_2	k_0	w	k_2	d_0	.	w	a_2.f1.hid	e_4	k_1
+m_1	wi	k_0	w	.	dn	.	w	me_1.f1	w	k_0
+
+.hid->enabled = 0
+
+on(merchant_1.f1)
+{
+        choice = input("董先生: 请回答我的问题: 大教堂是什么？", "1. 就是教堂", "2. 能吃吗？", "3. 一种自由软件开发模式")
+                if(choice == 3)
+                {
+                        message = "董先生: 回答正确！赐予你项目分析文档！"
+                        armour_2.f1->pick = 1
+                        #xz->state = #xz->state + 1
+                }
+                else
+                {
+                        message = "董先生: 回答错误！这一关的宝物你拿不到了！"
+                }
+        this->enabled = 0
+}
+
 at(2)
 dn	w	.	w	m_2	m_1	w	m_4	m_4	m_4	w
 d_0	w	m_3	w	m_2	m_1	w	k_0	k_2	m_3	w
@@ -231,10 +337,10 @@ d_0	w	m_3	w	m_2	m_1	w	k_0	k_2	m_3	w
 .	w	k_0	w	.	.	w	k_0	e_19	m_3	w
 .	w	dr_0	w	dr_1	w	w	w	dr_0	w	w
 .	dr_3.f2	.	.	.	w	.	.	.	.	w
-.	w	dr_0	w	dr_0	.	dr_0	w	w	w	w
-.	w	.	w	.	w	.	w	.	dr_4.fr	me_2.f2
+.	w	dr_0	w	dr_0	w	.	w	w	w	w
+.	w	.	w	.	dr_0	.	w	dr_4.fr	.	me_2.f2
 .	w	k_0	w	k_0	w	.	dr_0	e_13	w	w
-d_1	w	k_0	w	m_2	w	.	w	.	dr_4.fr	me_1.f2
+d_1	w	k_0	w	m_2	w	.	w	dr_4.fr	s_2.f2.hid	me_1.f2
 up	w	m_4	e_19	k_0	w	.	w	w	w	w
 
 on(.fr)
@@ -244,35 +350,48 @@ on(.fr)
 
 .hid->enabled = 0
 
-on(merchant_2.f2)
-{
-	message = "老者: 拿着这把剑吧孩子!"
-	message = "老者: 它会给你无穷的力量!"
-	weapon_2.f2->pick = 1
-	tom->attack = tom->attack + 30
-	this->enabled = 0
-}
 on(merchant_1.f2)
 {
-	message = "老者: 拿着这只盾吧孩子!"
-	message = "老者: 它会给你无穷的力量!"
-	armour_2.f2->pick = 1
-	tom->defend = tom->defend + 30
-	this->enabled = 0
+        choice = input("董先生: 请回答我的问题: 集市是什么？", "1. 一种自由软件开发模式", "2. 买菜的地方", "3. 一派胡言！")
+                if(choice == 1)
+                {
+                        message = "董先生: 回答正确！赐予你源代码！"
+                        weapon_2.f2->pick = 1
+                        #xz->state = #xz->state + 1
+                }
+                else
+                {
+                        message = "董先生: 回答错误！这一关的宝物你拿不到了！"
+                }
+        this->enabled = 0
 }
 
+on(merchant_2.f2)
+{
+        choice = input("吕老师: 人民币换实力.", "1. 提升一级(1RMB)", "2. 增加20点攻击(1RMB)", "3. 增加20点防御(1RMB)")
+        if(tom->money >= 0)
+        {
+                if(choice == 1)
+                {
+                        tom->attack = tom->attack + 8
+                        tom->defend = tom->defend + 8
+                        tom->health = tom->health + 1000
+                }
+                if(choice == 2)
+                {
+                        tom->attack = tom->attack + 20
+                }
+                if(choice == 3)
+                {
+                        tom->defend = tom->defend + 20
+                }
 
-wisdomEnabled = 0
-teleportEnabled = 0
-
-tom->health = 1000
-tom->attack = 10
-tom->defend = 10
-
+        }
+}
 
 at(3)
 s_1	e_28	k_0	w	me_2.f3	me_6.f3	me_1.f3	w	w	w	w
-e_28	k_0	.	w	.	.	.	w	k_0	k_0	k_0
+e_28	k_0	.	w	.	.	a_3.f3.hid	w	k_0	k_0	k_0
 k_0	.	.	w	w	dr_0	w	w	.	w	e_27
 .	e_25	.	w	.	e_5	.	.	.	w	e_28
 w	dr_0	w	w	w	w	w	w	.	w	e_27
@@ -285,9 +404,27 @@ dn	d_0	w	w	k_0	k_0	e_28	w	.	w	up
 
 weapon_1->attack = 10
 
+.hid->enabled = 0
+
+on(merchant_1.f3)
+{
+        choice = input("董先生: 请回答我的问题: UML是什么？", "1. 油蜜梨", "2. 标准建模语言", "3. Naive！")
+                if(choice == 2)
+                {
+                        message = "董先生: 回答正确！赐予你开题报告文档！"
+                        armour_3.f3->pick = 1
+                        #xz->state = #xz->state + 1
+                }
+                else
+                {
+                        message = "董先生: 回答错误！这一关的宝物你拿不到了！"
+                }
+        this->enabled = 0
+}
+
 on(merchant_6.f3)
 {
-	choice = input("商人: 用25元换取任意一项:", "1. 增加800点生命", "2. 增加4点攻击", "3. 增加4点防御")
+        choice = input("校长: 用25元换取任意一项:", "1. 增加800点生命", "2. 增加4点攻击", "3. 增加4点防御")
 	if(tom->money >= 25)
 	{
 		if(choice == 1)
@@ -306,13 +443,34 @@ on(merchant_6.f3)
 			tom->money = tom->money - 25
 		}
 
-	}
+        }
+}
+
+on(merchant_2.f3)
+{
+        choice = input("吕老师: 用人民币换取金币:", "1. 花费1RMB增加100金币", "2. 花费5RMB增加600金币", "3. 花费10RMB增加1200金币")
+        if(tom->money >= 0)
+        {
+                if(choice == 1)
+                {
+                        tom->money = tom->money + 100
+                }
+                if(choice == 2)
+                {
+                        tom->money = tom->money + 1200
+                }
+                if(choice == 3)
+                {
+                        tom->money = tom->money + 10000
+                }
+
+        }
 }
 
 at(4)
 w	w	w	w	w	w	w	w	.	.	.
 me_5.f4	w	e_21	m_4	w	e_23	m_3	w	.	w	.
-.	dr_4.fr	e_2	e_21	dr_2	e_22	e_23	dr_1	.	w	.
+s_3.f4.hid	dr_4.fr	e_2	e_21	dr_2	e_22	e_23	dr_1	.	w	.
 me_1.f4	w	e_21	m_4	w	e_23	m_3	w	k_0	w	k_0
 w	w	w	w	w	w	w	w	e_26	w	e_26
 dr_0	e_26	dr_0	.	.	e_25	m_1	m_1	.	w	.
@@ -322,73 +480,61 @@ e_28	w	e_26	w	w	w	w	w	w	w	w
 d_1	w	.	dr_0	.	e_27	e_27	e_28	.	.	d_0
 up	w	w	w	w	w	w	w	w	w	dn
 
-enemy_20->health = 550
-enemy_20->attack = 160
-enemy_20->defend = 90
-enemy_20->money = 25
-enemy_20->exp = 20
-
-enemy_22->health = 450
-enemy_22->attack = 150
-enemy_22->defend = 90
-enemy_22->money = 22
-enemy_22->exp = 19
-
 merchant_5.f4->state = 0
+
+.hid->enabled = 0
+
+on(merchant_1.f4)
+{
+        choice = input("董先生: 请回答我的问题: 程序编码的基本目标是", "1. 可阅读性“, "2. 可复用性", "3. 可修改性")
+                if(choice == 1)
+                {
+                        message = "董先生: 回答正确！赐予你系统设计文档！"
+                        weapon_3.f4->pick = 1
+                        #xz->state = #xz->state + 1
+                }
+                else
+                {
+                        message = "董先生: 回答错误！这一关的宝物你拿不到了！"
+                }
+        this->enabled = 0
+}
 
 on(merchant_5.f4)
 {
 	if (this->state == 0)
 	{
-		message = "勇士: 你已经得救了!"
-		message = "小偷: 啊, 那太好了,我又可以寻宝了!"
-		message = "小偷: 哦, 我还没有自我介绍."
-		message = "小偷: 我叫杰克,是这附近有名的小偷."
-		message = "小偷: 金银财宝样样都偷过."
-		message = "小偷: 不过这次运气不好,刚进来就被抓了."
-		message = "小偷: 现在你帮我开了门,"
-		message = "小偷: 我就帮你做一件事吧!"
-		message = "勇士: 快走吧,外面还有很多怪兽,"
-		message = "勇士: 我可能顾不上你."
-		message = "小偷: 不,不会有事的."
-		message = "小偷: 快说吧,要我做什么?"
-		message = "勇士: ...你会开门吗?"
-		message = "小偷: 那当然."
-		message = "勇士: 那就请你帮我打开第二层的门吧!"
-		message = "小偷: 可以."
-		message = "小偷: 不过如果你能帮我找到一个"
-		message = "小偷: 镶着红宝石的铁榔头的话,"
-		message = "小偷: 我还能帮你打开地十八层的门."
-		message = "勇士: 好吧,我帮你找找."
-		message = "小偷: 非常感谢, 一会我就打开第二层的门."
-		message = "小偷: 如果你找到那个铁榔头的话"
-		message = "小偷: 就来这里找我!"
+                message = "学生: 助教你怎么在这儿!"
+                message = "助教: 啊, 那太好了,你终于来了"
+                message = "助教: 软工学得咋样了？"
+                message = "助教: 报告写了吗？"
+                message = "助教: 文档写了吗？"
+                message = "助教: 测试过了吗？"
+                message = "助教: ＢＵＧ修复了吗？"
+                message = "助教: 怎么有空来着？"
+                message = "学生: 额。。我是被长者叫过来的"
+                message = "学生: 我也不知道咋回事"
+                message = "助教: 长者啊。。。。"
+                message = "助教: 看来你有重要任务"
+                message = "学生: 是啊，而且现在遇到了大问题"
+                message = "助教: 哦，是什么"
+                message = "学生: 第二层的门打不开啊！"
+                message = "助教: 那是小事一桩"
+                message = "助教: 我可以帮你开"
+                message = "助教: 不过你得答应我件事情"
+                message = "助教: 好好学习！！！"
+                message = "学生: 是是是，我一定好好码代码！"
+                message = "助教: 嗯, 一会我就打开第二层的门."
+                message = "助教: 不要辜负了长者！"
+                message = "助教: 好好完成任务！"
 		door.f2->enabled = 0
 		this->state = 1
-	}
-	if (this->state == 2)
-	{
-		message = "小偷: 看来你拿到了我需要的."
-		message = "小偷: 我这就去给你开门!"
-		this->position_x = 5
-		this->position_y = 10
-		this->level = 18
-		this->state = 3
-		altwall_1.f18->enabled = 0
-	}
-	else
-	if (this->state == 3)
-	{
-		message = "小偷: 嗨,你来了!"
-		message = "小偷: 你看, 这扇门已经打开了!"
-		message = "小偷: 那么, 后会有期!"
-		this->enabled = 0
 	}
 }
 
 at(5)
 me_6.f5	w	me_1.f5	w	m_2	e_8	.	.	e_8	k_0	k_1
-.	w	.	w	e_8	k_0.f5	k_1.f5	k_2.f5	.	e_8	k_0
+.	w	a_4.f5.hid	w	e_8	k_0.f5	k_1.f5	k_2.f5	.	e_8	k_0
 m_4	w	e_3	w	e_24	.	w	w	dr_0	w	w
 m_3	e_21	.	w	a_5	e_24	w	.	e_23	e_24	me_5.f5
 w	w	dr_0	w	w	w	w	.	.	.	e_24
@@ -399,10 +545,27 @@ w	w	w	e_27	w	dr_0	w	dr_1	w	dr_0	w
 d_0	.	e_27	.	.	e_27	w	k_0	w	.	w
 dn	w	w	w	w	w	w	dr_0	d_1	up	w
 
+.hid->enabled = 0
+
+on(merchant_1.f5)
+{
+        choice = input("董先生: 请回答我的问题: 软件生存周期第一项内容？", "1. 软件设计", "2. 需求分析", "3. 制定计划")
+                if(choice == 3)
+                {
+                        message = "董先生: 回答正确！赐予你需求报告文档！"
+                        armour_4.f5->pick = 1
+                        #xz->state = #xz->state + 1
+                }
+                else
+                {
+                        message = "董先生: 回答错误！这一关的宝物你拿不到了！"
+                }
+        this->enabled = 0
+}
 
 on(merchant_5.f5)
 {
-	choice = input("商人: 金币换钥匙.", "1. 购买一把黄钥匙($10)", "2. 购买一把蓝钥匙($50)", "3. 购买一把红钥匙($100)")
+        choice = input("助教: 金币换鼠标.", "1. 购买一个滚轮鼠标($10)", "2. 购买一个光电鼠标($50)", "3. 购买一个无线鼠标($100)")
 	if(choice == 1)
 	{
 		if (tom->money >= 10)
@@ -431,7 +594,7 @@ on(merchant_5.f5)
 
 on(merchant_6.f5)
 {
-	choice = input("商人: 经验换实力.", "1. 提升一级(100经验)", "2. 增加5点攻击(30经验)", "3. 增加5点防御(30点经验)")
+        choice = input("校长: 经验换实力.", "1. 提升一级(100经验)", "2. 增加5点攻击(30经验)", "3. 增加5点防御(30点经验)")
 	if(choice == 1)
 	{
 		if (tom->exp >= 100)
@@ -471,46 +634,16 @@ on(any.f5)
 
 at(6)
 m_2	m_2	w	.	w	w	w	w	w	w	w
-me_1.f6	m_2	w	.	w	an#coin.fr	e_18	k_0	w	an#f6.fr	e_14
-.	e_10	dr_0	.	w	e_18	k_2	.	w	e_14	k_0
-.	.	w	e_22	w	k_0	.	e_20	w	k_0	e_20
+m_2	m_2	w	.	w	an#coin.fr	e_18	k_0	w	an#f6.fr	e_14
+w	e_10	dr_0	.	w	e_18	k_2	.	w	e_14	k_0
+me_1.f6	s_4.f6.hid	w	e_22	w	k_0	.	e_20	w	k_0	e_20
 w	w	w	e_7	w	w	w	dr_1	w	w	dr_1
 e_21	.	e_7	k_0	k_0	k_0	dr_2	.	m_3	m_4	.
 .	w	w	w	w	w	w	w	w	w	w
 .	w	.	e_21	.	.	dr_1	.	.	.	w
 .	w	dr_0	w	dr_0	w	.	w	w	.	w
-dr_0	w	.	w	.	w	.	w	.	d_0	w
+dr_0	w	.	w	.	.	.	w	.	d_0	w
 .	e_21	.	w	up	d_1	.	dr_0	dr_0	dn	w
-
-enemy_24->health = 150
-enemy_24->attack = 40
-enemy_24->defend = 20
-enemy_24->money = 8
-enemy_24->exp = 6
-
-enemy_7->health = 100
-enemy_7->attack = 200
-enemy_7->defend = 110
-enemy_7->money = 30
-enemy_7->exp = 25
-
-enemy_17->health = 500
-enemy_17->attack = 400
-enemy_17->defend = 260
-enemy_17->money = 47
-enemy_17->exp = 45
-
-enemy_18->health = 700
-enemy_18->attack = 250
-enemy_18->defend = 125
-enemy_18->money = 32
-enemy_18->exp = 30
-
-enemy_6->health = 500
-enemy_6->attack = 115
-enemy_6->defend = 65
-enemy_6->money = 15
-enemy_6->exp = 15
 
 any#coin->pix = ":/images/coin"
 
@@ -524,7 +657,25 @@ on(#f6)
 {
 	tom->attack = tom->attack + 10
 	tom->defend = tom->defend + 10
-	top->health = tom->health + 1000
+        tom->health = tom->health + 1000
+}
+
+.hid->enabled = 0
+
+on(merchant_1.f6)
+{
+        choice = input("董先生: 请回答我的问题: 软件过程成熟度模型？", "1. CMM”, "2. BMM", "3. AMM")
+                if(choice == 1)
+                {
+                        message = "董先生: 回答正确！赐予你用户使用手册！"
+                        weapon_4.f6->pick = 1
+                        #xz->state = #xz->state + 1
+                }
+                else
+                {
+                        message = "董先生: 回答错误！这一关的宝物你拿不到了！"
+                }
+        this->enabled = 0
 }
 
 at(7)
@@ -538,13 +689,7 @@ w	.	e_6	m_4	w	e_19	w	m_3	e_14	.	w
 .	w	k_0	m_1	w	dr_1	w	m_1	k_0	w	.
 .	w	w	k_1	k_1	m_2	k_1	k_1	w	w	.
 e_15	dr_0	w	w	w	dr_2	w	w	w	.	.
-w	.	me_1.f7	dr_0	dn	d_0	.	.	.	.	w
-
-enemy_11->health = 250
-enemy_11->attack = 120
-enemy_11->defend = 70
-enemy_11->money = 20
-enemy_11->exp = 17
+w	a_1.f7.hid	me_1.f7	dr_0	dn	d_0	.	.	.	.	w
 
 #cross->pix = ":/images/cross"
 
@@ -559,18 +704,30 @@ on (.pi)
 	this->enabled = 0
 }
 
-enemy_19->health = 1300
-enemy_19->attack = 300
-enemy_19->defend = 150
-enemy_19->money = 40
-enemy_19->exp = 35
+.hid->enabled = 0
+
+on(merchant_1.f7)
+{
+        choice = input("董先生: 请回答我的问题: GitHub是什么？", "1. 交友网站", "2. 代码库及版本控制", "3. 可以抄代码")
+                if(choice == 2)
+                {
+                        message = "董先生: 回答正确！赐予你系统测试文档！"
+                        armour_1.f7->pick = 1
+                        #xz->state = #xz->state + 1
+                }
+                else
+                {
+                        message = "董先生: 回答错误！这一关的宝物你拿不到了！"
+                }
+        this->enabled = 0
+}
 
 at(8)
 dn	w	.	.	.	.	w	.	k_0	e_14	.
 d_0	w	.	w	w	dr_0	w	dr_0	w	w	.
 .	w	.	w	.	.	dr_1	.	.	w	m_3
 .	w	.	w	e_11	w	w	w	e_21	w	e_26
-e_21	w	.	w	m_1	w	me_1.f8	.	e_12	w	e_26
+e_21	w	.	w	m_1	w	me_1.f8	s_5.f8.hid	e_12	w	e_26
 e_20	w	m_4	w	m_1	w	w	w	w	w	.
 e_21	w	e_26	w	.	.	.	.	w	e_20	.
 .	w	e_26	w	w	w	w	e_22	w	dr_0	w
@@ -578,6 +735,23 @@ e_21	w	e_26	w	.	.	.	.	w	e_20	.
 .	w	w	w	w	dr_0	w	e_18	w	e_18	w
 .	.	m_3	.	e_11	.	w	m_4	w	.	m_3
 
+.hid->enabled = 0
+
+on(merchant_1.f8)
+{
+        choice = input("董先生: 请回答我的问题: 为什么要学习软件工程", "1. 闲的蛋疼", "2. 不知道", "3. 搞个大新闻")
+                if(choice == 3)
+                {
+                        message = "董先生: 回答正确！赐予你应用程序文档！"
+                        weapon_5.f8->pick = 1
+                        #xz->state = #xz->state + 1
+                }
+                else
+                {
+                        message = "董先生: 回答错误！这一关的宝物你拿不到了！"
+                }
+        this->enabled = 0
+}
 
 at(9)
 an#snow	k_0	.	w	w	w	.	.	.	w	.
@@ -654,24 +828,6 @@ on(merchant_3.f11)
 
 armour_3->defend = 85
 
-enemy_2->health = 1500
-enemy_2->attack = 560
-enemy_2->defend = 460
-enemy_2->money = 60
-enemy_2->exp = 60
-
-enemy_3->health = 1250
-enemy_3->attack = 500
-enemy_3->defend = 400
-enemy_3->money = 55
-enemy_3->exp = 55
-
-enemy_4->health = 1200
-enemy_4->attack = 620
-enemy_4->defend = 520
-enemy_4->money = 65
-enemy_4->exp = 75
-
 at(12)
 me_1.f12	m_4	w	.	e_16	e_15	e_16	.	w	m_2	any#axe.pi
 m_3	.	w	.	w	dr_0	w	.	w	.	m_2
@@ -694,7 +850,7 @@ on(merchant_1.f12)
 		{
 			tom->money = tom->money + 7
 		}
-		else
+                else
 			message = "Are you kidding me?"
 	}
 	if(choice == 2)
@@ -863,7 +1019,7 @@ enemy_30->exp = 100
 on(#line)
 {
 	message = "魔王: 你终于来了!"
-	message = "勇士: 快把公主交粗来! "
+        message = "学生: 快把公主交粗来! "
 	message = "魔王: 哼哼, 那要先过我这关."
 }
 
@@ -933,20 +1089,20 @@ on(merchant_6.f18)
 {
 	if(this->state == 0)
 	{
-		message = "勇士: 美丽的公主,我来就你了!"
-		message = "公主: 啊, 勇士, 是你!"
-		message = "勇士: 我们快走吧!"
+                message = "学生: 美丽的公主,我来就你了!"
+                message = "公主: 啊, 学生, 是你!"
+                message = "学生: 我们快走吧!"
 		message = "公主: ....不, 我还不想走."
-		message = "勇士: ....?!"
-		message = "勇士: 这里到处都是怪物,"
-		message = "勇士: 不作死就不会死,怎么就是不懂呢?"
+                message = "学生: ....?!"
+                message = "学生: 这里到处都是怪物,"
+                message = "学生: 不作死就不会死,怎么就是不懂呢?"
 		message = "公主: 正是因为都是怪物,才不敢出去."
 		message = "公主: 你去把大魔王杀死吧,"
 		message = "公主: 然后我就跟你走."
-		message = "勇士: 可是我已经杀死了一个魔王了啊?"
+                message = "学生: 可是我已经杀死了一个魔王了啊?"
 		message = "公主: 那个是假的."
 		message = "公主: 真正的魔王在塔顶."
-		message = "勇士: 好吧, 打败了魔王我就来接你!"
+                message = "学生: 好吧, 打败了魔王我就来接你!"
 		message = "公主: 嗯, 我等着你!"
 		#up.f18->enabled = 1
 		this->state = 1
@@ -969,18 +1125,12 @@ at(19)
 weapon_5->attack = 150
 armour_1->defend = 190
 
-enemy_31->health = 30000
-enemy_31->attack = 1700
-enemy_31->defend = 1500
-enemy_31->money = 250
-enemy_31->exp = 220
-
 on(enemy_31.f19)
 {
-	message = "勇士: 大魔王! 你的死期到了!"
+        message = "学生: 大魔王! 你的死期到了!"
 	message = "魔王: 哈哈哈哈哈哈哈哈哈"
 	message = "魔王: 想不到你还真能活到这里."
-	message = "魔王: 仙子还真以为你能打败我?"
+        message = "魔王: 长者还真以为你能打败我?"
 	message = "魔王: 你还差得远呢!"
 	if(return == 1)
 	{
