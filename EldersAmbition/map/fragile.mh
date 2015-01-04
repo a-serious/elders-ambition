@@ -1,4 +1,4 @@
-﻿on (.fra)
+on (.fra)
 {
 	this->enabled = 0
 }
