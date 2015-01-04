@@ -35,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent)
     //ymj
     this->setAutoFillBackground(true); // 这句要加上, 否则可能显示不出背景图.
     QPalette palette = this->palette();
-    palette.setBrush(QPalette::Window, QBrush(QPixmap(":/images/assets/Images/UIDesignV1.3.jpg").scaled(
+    palette.setBrush(QPalette::Window, QBrush(QPixmap(":/images/assets/Images/backgroundV1.3.jpg").scaled(
                 this->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation))); // 使用平滑的缩放方式
     this->setPalette(palette); // 至此, 已给widget加上了背景图.
     //ymj
