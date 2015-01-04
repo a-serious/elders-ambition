@@ -37,9 +37,10 @@ EldersTom::EldersTom(int x, int y, int level, EldersMap *parent)
     property["label"] = "tom";
     property["attack"] = 50;
     property["defend"] = 50;
-    property["health"] = 500;
+    property["health"] = 500;   
     property["exp"] = 0;
     property["money"] = 0;
+    property["RMB"] = 0;
     property["id"] = "";
     property["range"] = 0;
 
