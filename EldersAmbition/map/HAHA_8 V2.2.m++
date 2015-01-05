@@ -369,10 +369,11 @@ on(merchant_1.f2)
 on(merchant_2.f2)
 {
         choice = input("吕老师: 人民币换实力.", "1. 提升一级(1RMB)", "2. 增加20点攻击(1RMB)", "3. 增加20点防御(1RMB)")
-        if(tom->money >= 0)
+        if(tom->RMB >= 1)
         {
                 if(choice == 1)
                 {
+                        tom->RMB = tom->RMB - 1
                         tom->attack = tom->attack + 8
                         tom->defend = tom->defend + 8
                         tom->health = tom->health + 1000
@@ -380,12 +381,17 @@ on(merchant_2.f2)
                 if(choice == 2)
                 {
                         tom->attack = tom->attack + 20
+                        tom->RMB = tom->RMB - 1
                 }
                 if(choice == 3)
                 {
                         tom->defend = tom->defend + 20
+                        tom->RMB = tom->RMB - 1
                 }
-
+        }
+        else
+        {
+                message = "你的人民币不够，请速去充值！"
         }
 }
 
@@ -448,22 +454,42 @@ on(merchant_6.f3)
 
 on(merchant_2.f3)
 {
-        choice = input("吕老师: 用人民币换取金币:", "1. 花费1RMB增加100金币", "2. 花费5RMB增加600金币", "3. 花费10RMB增加1200金币")
-        if(tom->money >= 0)
+        choice = input("吕老师: 用人民币换取金币:", "1. 花费1RMB增加100金币", "2. 花费5RMB增加600金币", "3. 花费10RMB增加1500金币")
+        if(choice == 1)
         {
-                if(choice == 1)
+                if (tom->RMB >= 1)
                 {
                         tom->money = tom->money + 100
+                        tom->RMB = tom->RMB - 1
                 }
-                if(choice == 2)
+                else
                 {
-                        tom->money = tom->money + 1200
+                        message = "你的人民币不够，请速去充值！"
                 }
-                if(choice == 3)
+        }
+        if(choice == 2)
+        {
+                if (tom->RMB >= 5)
                 {
-                        tom->money = tom->money + 10000
+                        tom->money = tom->money + 600
+                        tom->RMB = tom->RMB - 5
                 }
-
+                else
+                {
+                        message = "你的人民币不够，请速去充值！"
+                }
+        }
+        if(choice == 3)
+        {
+                if (tom->RMB >= 10)
+                {
+                        tom->money = tom->money + 1500
+                        tom->RMB = tom->RMB - 10
+                }
+                else
+                {
+                        message = "你的人民币不够，请速去充值！"
+                }
         }
 }
 
@@ -486,7 +512,7 @@ merchant_5.f4->state = 0
 
 on(merchant_1.f4)
 {
-        choice = input("董先生: 请回答我的问题: 程序编码的基本目标是", "1. 可阅读性“, "2. 可复用性", "3. 可修改性")
+        choice = input("董先生: 请回答我的问题: 程序编码的基本目标是", "1. 可阅读性", "2. 可复用性", "3. 可修改性")
                 if(choice == 1)
                 {
                         message = "董先生: 回答正确！赐予你系统设计文档！"
