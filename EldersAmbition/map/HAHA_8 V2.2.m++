@@ -1,81 +1,81 @@
-﻿enemy_9->health = 1750
-enemy_9->attack = 480
-enemy_9->defend = 400
+﻿enemy_9->health = 2500
+enemy_9->attack = 900
+enemy_9->defend = 850
 enemy_9->money = 84
 enemy_9->exp = 75
 //地底小怪
 
-enemy_31->health = 2100
-enemy_31->attack = 640
-enemy_31->defend = 560
+enemy_31->health = 30000
+enemy_31->attack = 1700
+enemy_31->defend = 2200
 enemy_31->money = 250
 enemy_31->exp = 220
 //最终大BOSS
 
-enemy_2->health = 630
-enemy_2->attack = 56
-enemy_2->defend = 48
-enemy_2->money = 65
-enemy_2->exp = 65
+enemy_2->health = 1500
+enemy_2->attack = 560
+enemy_2->defend = 460
+enemy_2->money = 60
+enemy_2->exp = 60
 //第四层的小BOSS
 
-enemy_3->health = 490
-enemy_3->attack = 28
-enemy_3->defend = 24
+enemy_3->health = 1250
+enemy_3->attack = 500
+enemy_3->defend = 400
 enemy_3->money = 55
 enemy_3->exp = 55
 //第五层的小BOSS
 
-enemy_4->health = 560
-enemy_4->attack = 48
-enemy_4->defend = 40
-enemy_4->money = 60
-enemy_4->exp = 60
+enemy_4->health = 1200
+enemy_4->attack = 620
+enemy_4->defend = 520
+enemy_4->money = 65
+enemy_4->exp = 75
 //第一层的小BOSS
 
-enemy_5->health = 420
-enemy_5->attack = 18
-enemy_5->defend = 12
+enemy_5->health = 600
+enemy_5->attack = 22
+enemy_5->defend = 15
 enemy_5->money = 50
 enemy_5->exp = 50
 //第三层的小BOSS
 
-enemy_10->health = 770
-enemy_10->attack = 96
-enemy_10->defend = 64
-enemy_10->money = 75
-enemy_10->exp = 75
+enemy_10->health = 2000
+enemy_10->attack = 680
+enemy_10->defend = 590
+enemy_10->money = 70
+enemy_10->exp = 65
 //第六层的小BOSS
 
-enemy_12->health = 910
-enemy_12->attack = 120
-enemy_12->defend = 80
-enemy_12->money = 85
-enemy_12->exp = 85
+enemy_12->health = 1200
+enemy_12->attack = 980
+enemy_12->defend = 900
+enemy_12->money = 88
+enemy_12->exp = 75
 //第八层的小BOSS
 
-enemy_13->health = 840
-enemy_13->attack = 104
-enemy_13->defend = 72
+enemy_13->health = 1500
+enemy_13->attack = 830
+enemy_13->defend = 730
 enemy_13->money = 80
-enemy_13->exp = 80
+enemy_13->exp = 70
 //第二层的小BOSS
 
-enemy_15->health = 700
-enemy_15->attack = 72
-enemy_15->defend = 48
-enemy_15->money = 70
+enemy_15->health = 900
+enemy_15->attack = 750
+enemy_15->defend = 650
+enemy_15->money = 77
 enemy_15->exp = 70
 //第七层的小BOSS
 
-enemy_23->health = 210
-enemy_23->attack = 60
-enemy_23->defend = 36
+enemy_23->health = 300
+enemy_23->attack = 75
+enemy_23->defend = 45
 enemy_23->money = 13
 enemy_23->exp = 10
 
-enemy_27->health = 70
-enemy_27->attack = 16
+enemy_27->health = 100
+enemy_27->attack = 20
 enemy_27->defend = 5
 enemy_27->money = 3
 enemy_27->exp = 3
@@ -86,69 +86,69 @@ enemy_16->defend = 200
 enemy_16->money = 45
 enemy_16->exp = 40
 
-enemy_28->health = 50
-enemy_28->attack = 12
+enemy_28->health = 70
+enemy_28->attack = 15
 enemy_28->defend = 2
 enemy_28->money = 2
 enemy_28->exp = 2
 
-enemy_29->health = 35
-enemy_29->attack = 16
+enemy_29->health = 50
+enemy_29->attack = 20
 enemy_29->defend = 1
 enemy_29->money = 1
 enemy_29->exp = 1
 
-enemy_25->health = 77
-enemy_25->attack = 20
+enemy_25->health = 110
+enemy_25->attack = 25
 enemy_25->defend = 5
 enemy_25->money = 5
 enemy_25->exp = 4
 
-enemy_14->health = 280
-enemy_14->attack = 72
-enemy_14->defend = 40
+enemy_14->health = 400
+enemy_14->attack = 90
+enemy_14->defend = 50
 enemy_14->money = 15
 enemy_14->exp = 12
 
-enemy_8->health = 90
-enemy_8->attack = 40
-enemy_8->defend = 28
+enemy_8->health = 125
+enemy_8->attack = 50
+enemy_8->defend = 25
 enemy_8->money = 10
 enemy_8->exp = 7
 
-enemy_21->health = 105
-enemy_21->attack = 52
-enemy_21->defend = 24
+enemy_21->health = 150
+enemy_21->attack = 65
+enemy_21->defend = 30
 enemy_21->money = 10
 enemy_21->exp = 8
 
-enemy_26->health = 140
-enemy_26->attack = 28
-enemy_26->defend = 8
+enemy_26->health = 200
+enemy_26->attack = 35
+enemy_26->defend = 10
 enemy_26->money = 5
 enemy_26->exp = 5
 
-enemy_20->health = 385
-enemy_20->attack = 128
-enemy_20->defend = 72
+enemy_20->health = 550
+enemy_20->attack = 160
+enemy_20->defend = 90
 enemy_20->money = 25
 enemy_20->exp = 20
 
-enemy_22->health = 315
-enemy_22->attack = 120
-enemy_22->defend = 72
+enemy_22->health = 450
+enemy_22->attack = 150
+enemy_22->defend = 90
 enemy_22->money = 22
 enemy_22->exp = 19
 
-enemy_24->health = 105
-enemy_24->attack = 32
-enemy_24->defend = 16
+enemy_24->health = 150
+enemy_24->attack = 40
+enemy_24->defend = 20
 enemy_24->money = 8
 enemy_24->exp = 6
 
-enemy_7->health = 70
-enemy_7->attack = 160
-enemy_7->defend = 88
+enemy_7->health = 100
+enemy_7->attack = 200
+enemy_7->defend = 110
 enemy_7->money = 30
 enemy_7->exp = 25
 
@@ -158,27 +158,27 @@ enemy_17->defend = 260
 enemy_17->money = 47
 enemy_17->exp = 45
 
-enemy_18->health = 490
-enemy_18->attack = 168
-enemy_18->defend = 100
+enemy_18->health = 700
+enemy_18->attack = 250
+enemy_18->defend = 125
 enemy_18->money = 32
 enemy_18->exp = 30
 
-enemy_6->health = 350
-enemy_6->attack = 92
-enemy_6->defend = 52
+enemy_6->health = 500
+enemy_6->attack = 115
+enemy_6->defend = 65
 enemy_6->money = 15
 enemy_6->exp = 15
 
-enemy_11->health = 175
-enemy_11->attack = 96
-enemy_11->defend = 56
+enemy_11->health = 250
+enemy_11->attack = 120
+enemy_11->defend = 70
 enemy_11->money = 20
 enemy_11->exp = 17
 
-enemy_19->health = 910
-enemy_19->attack = 192
-enemy_19->defend = 100
+enemy_19->health = 1300
+enemy_19->attack = 300
+enemy_19->defend = 150
 enemy_19->money = 40
 enemy_19->exp = 35
 
@@ -369,10 +369,11 @@ on(merchant_1.f2)
 on(merchant_2.f2)
 {
         choice = input("吕老师: 人民币换实力.", "1. 提升一级(1RMB)", "2. 增加20点攻击(1RMB)", "3. 增加20点防御(1RMB)")
-        if(tom->money >= 0)
+        if(tom->RMB >= 1)
         {
                 if(choice == 1)
                 {
+                        tom->RMB = tom->RMB - 1
                         tom->attack = tom->attack + 8
                         tom->defend = tom->defend + 8
                         tom->health = tom->health + 1000
@@ -380,12 +381,17 @@ on(merchant_2.f2)
                 if(choice == 2)
                 {
                         tom->attack = tom->attack + 20
+                        tom->RMB = tom->RMB - 1
                 }
                 if(choice == 3)
                 {
                         tom->defend = tom->defend + 20
+                        tom->RMB = tom->RMB - 1
                 }
-
+        }
+        else
+        {
+                message = "你的人民币不够，请速去充值！"
         }
 }
 
@@ -448,22 +454,42 @@ on(merchant_6.f3)
 
 on(merchant_2.f3)
 {
-        choice = input("吕老师: 用人民币换取金币:", "1. 花费1RMB增加100金币", "2. 花费5RMB增加600金币", "3. 花费10RMB增加1200金币")
-        if(tom->money >= 0)
+        choice = input("吕老师: 用人民币换取金币:", "1. 花费1RMB增加100金币", "2. 花费5RMB增加600金币", "3. 花费10RMB增加1500金币")
+        if(choice == 1)
         {
-                if(choice == 1)
+                if (tom->RMB >= 1)
                 {
                         tom->money = tom->money + 100
+                        tom->RMB = tom->RMB - 1
                 }
-                if(choice == 2)
+                else
                 {
-                        tom->money = tom->money + 1200
+                        message = "你的人民币不够，请速去充值！"
                 }
-                if(choice == 3)
+        }
+        if(choice == 2)
+        {
+                if (tom->RMB >= 5)
                 {
-                        tom->money = tom->money + 10000
+                        tom->money = tom->money + 600
+                        tom->RMB = tom->RMB - 5
                 }
-
+                else
+                {
+                        message = "你的人民币不够，请速去充值！"
+                }
+        }
+        if(choice == 3)
+        {
+                if (tom->RMB >= 10)
+                {
+                        tom->money = tom->money + 1500
+                        tom->RMB = tom->RMB - 10
+                }
+                else
+                {
+                        message = "你的人民币不够，请速去充值！"
+                }
         }
 }
 
@@ -486,7 +512,7 @@ merchant_5.f4->state = 0
 
 on(merchant_1.f4)
 {
-        choice = input("董先生: 请回答我的问题: 程序编码的基本目标是", "1. 可阅读性“, "2. 可复用性", "3. 可修改性")
+        choice = input("董先生: 请回答我的问题: 程序编码的基本目标是", "1. 可阅读性", "2. 可复用性", "3. 可修改性")
                 if(choice == 1)
                 {
                         message = "董先生: 回答正确！赐予你系统设计文档！"
@@ -1134,9 +1160,9 @@ on(enemy_31.f19)
 	message = "魔王: 你还差得远呢!"
 	if(return == 1)
 	{
-                enemy_31->health = 3000
-                enemy_31->attack = 800
-                enemy_31->defend = 700
+		enemy_31->health = 30000
+		enemy_31->attack = 1700
+		enemy_31->defend = 1500
 		enemy_31->money = 250
 		enemy_31->exp = 220
 	}
