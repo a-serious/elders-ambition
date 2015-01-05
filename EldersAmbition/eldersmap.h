@@ -60,6 +60,7 @@ public:
     void appendAnimate(EldersAnimate *, bool);
     void appendObject(EldersDisplayObject *);
 
+    int foreSoundEnabled;
     void appendSound(QString);
 
     QList<EldersObject *> findDisplayObject(QString, QString, QList<QString>);

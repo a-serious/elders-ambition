@@ -69,6 +69,8 @@ void EldersMap::initialize()
     animateFlag = 0;
     eventFlag = 0;
 
+    foreSoundEnabled = 1;
+
     property["wisdomEnabled"] = 0;
     property["teleportEnabled"] = 0;
 
@@ -177,10 +179,13 @@ bool EldersMap::loadRecord(QFile *file)
 void EldersMap::paint(QPainter *painter)
 {
     soundListLock.lock();
-    for (QMutableListIterator<QString> i(soundToPlay); i.hasNext(); )
+    if (foreSoundEnabled)
     {
-        QSound::play(i.next());
-        i.remove();
+        for (QMutableListIterator<QString> i(soundToPlay); i.hasNext(); )
+        {
+            QSound::play(i.next());
+            i.remove();
+        }
     }
     soundListLock.unlock();
 
@@ -272,7 +277,10 @@ void EldersMap::appendObject(EldersDisplayObject *target)
 void EldersMap::appendSound(QString target)
 {
     soundListLock.lock();
-    soundToPlay.append(target);
+    if (foreSoundEnabled)
+    {
+        soundToPlay.append(target);
+    }
     soundListLock.unlock();
 }
 
