@@ -61,6 +61,7 @@ public:
     void appendObject(EldersDisplayObject *);
 
     int foreSoundEnabled;
+//    int testForeSoundEnabled;
     void appendSound(QString);
 
     QList<EldersObject *> findDisplayObject(QString, QString, QList<QString>);

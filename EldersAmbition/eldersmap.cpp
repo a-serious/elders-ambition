@@ -70,6 +70,7 @@ void EldersMap::initialize()
     eventFlag = 0;
 
     foreSoundEnabled = 1;
+//    testForeSoundEnabled =5;
 
     property["wisdomEnabled"] = 0;
     property["teleportEnabled"] = 0;
@@ -277,6 +278,8 @@ void EldersMap::appendObject(EldersDisplayObject *target)
 void EldersMap::appendSound(QString target)
 {
     soundListLock.lock();
+//    testForeSoundEnabled--;
+//    if (testForeSoundEnabled == 0) foreSoundEnabled = 0;
     if (foreSoundEnabled)
     {
         soundToPlay.append(target);
