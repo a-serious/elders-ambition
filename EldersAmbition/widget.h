@@ -15,9 +15,9 @@ public:
     Widget(QWidget *parent);
     void keyPressEvent(QKeyEvent *);
     EldersMap *getMap();
-    void loadMap(QString);
+    void loadMap(int foreSound, QString);
     void saveRec(QString);
-    void loadRec(QString);
+    void loadRec(int foreSound, QString);
 
 public slots:
     void animate();
@@ -30,6 +30,7 @@ private:
     QString mapToLoad;
     QString recToLoad;
     QString recToSave;
+    int foreSoundEnabled = 1;
 };
 
 #endif

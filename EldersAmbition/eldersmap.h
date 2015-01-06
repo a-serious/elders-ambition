@@ -29,7 +29,7 @@ class EldersMap : public EldersObject
     QTimer *animateTimer;
 
     void destoryList();
-    void initialize();
+    void initialize(int foreSound);
 
     QStringList soundToPlay;
     QMutex soundListLock;
@@ -45,12 +45,12 @@ public:
 
     bool move(int, int); // direction
 
-    EldersMap();
+    EldersMap(int foreSound);
     QList<EldersDisplayObject *> displayList;
 
-    bool loadMap(QString = "");
+    bool loadMap(int foreSound, QString = "");
     bool saveRecord(QFile * = NULL);
-    bool loadRecord(QFile * = NULL);
+    bool loadRecord(int foreSound, QFile * = NULL);
     void paint(QPainter *);
 
     int eventFlag = 0;

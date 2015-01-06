@@ -71,12 +71,14 @@ void MainWindow::createMenus()
     openAct = new QAction(tr("读取地图(&M)"), this);
     saveAct = new QAction(tr("存档(&S)"), this);
     loadAct = new QAction(tr("读档(&R)"), this);
+    rechargeAct = new QAction(tr("充值(&C)"), this);
     exitAct = new QAction(tr("退出(&E)"), this);
 
+    restartAct = new QAction(tr("重新开始(&L)"), this);
     hardAct = new QAction(tr("困难"), this);
     mediumAct = new QAction(tr("中等"), this);
     easyAct = new QAction(tr("简单"), this);
-    propertyAct = new QAction(tr("选项(&P)"), this);
+    foresoundAct = new QAction(tr("音效开关(&O)"), this);
 
     manualAct = new QAction(tr("用户手册(&U)"), this);
     aboutAct = new QAction(tr("关于(&A)"), this);
@@ -93,13 +95,21 @@ void MainWindow::createMenus()
     fileMenu->addAction(loadAct);
     loadAct->setShortcut(QKeySequence("Ctrl+r"));
     fileMenu->addSeparator();
+    fileMenu->addAction(rechargeAct);
+    rechargeAct->setShortcut(QKeySequence("Ctrl+c"));
+    fileMenu->addSeparator();
     fileMenu->addAction(exitAct);
     exitAct->setShortcut(QKeySequence("Ctrl+e"));
 
+    settingMenu->addAction(restartAct);
+    restartAct->setShortcut(QKeySequence("Ctrl+l"));
+    settingMenu->addSeparator();
     difficultyMenu = settingMenu->addMenu(tr("选择难度(&D)"));
     settingMenu->addSeparator();
-    settingMenu->addAction(propertyAct);
-    propertyAct->setShortcut(QKeySequence("Ctrl+p"));
+    settingMenu->addAction(foresoundAct);
+    foresoundAct->setCheckable(true);
+    foresoundAct->setChecked(true);
+    foresoundAct->setShortcut(QKeySequence("Ctrl+o"));
 
     difficultyMenu->addAction(hardAct);
     hardAct->setCheckable(true);
@@ -120,10 +130,14 @@ void MainWindow::createMenus()
     connect(openAct, SIGNAL(triggered()), this, SLOT(open()));
     connect(saveAct, SIGNAL(triggered()), this, SLOT(save()));
     connect(loadAct, SIGNAL(triggered()), this, SLOT(load()));
+    connect(rechargeAct, SIGNAL(triggered()),this, SLOT(recharge()));
+
+    connect(restartAct, SIGNAL(triggered()), this, SLOT(restart()));
     connect(hardAct, SIGNAL(triggered()), this, SLOT(hard()));
     connect(mediumAct, SIGNAL(triggered()), this, SLOT(medium()));
     connect(easyAct, SIGNAL(triggered()), this, SLOT(easy()));
-    connect(propertyAct, SIGNAL(triggered()), this, SLOT(property()));
+    connect(foresoundAct, SIGNAL(triggered()), this, SLOT(foresound()));
+
     connect(manualAct, SIGNAL(triggered()), this, SLOT(manual()));
     connect(aboutAct, SIGNAL(triggered()), this, SLOT(about()));
 }
@@ -131,7 +145,9 @@ void MainWindow::createMenus()
 void MainWindow::open()
 {
     QString filename = QFileDialog::getOpenFileName(this, tr("打开地图文件"), "", tr("Elders Map++ (*.m++)"));
-    mWidget->loadMap(filename);
+    mapFileName = filename;
+    isRecord = false;
+    mWidget->loadMap((int)foresoundAct->isChecked(), filename);
 }
 
 void MainWindow::save()
@@ -154,7 +170,22 @@ void MainWindow::load()
     QString filename = QFileDialog::getOpenFileName(this, tr("打开存档文件"), "save0.rec", tr("Elders Record (*.rec)"));
     if (filename.isEmpty())
         return;
-    mWidget->loadRec(filename);
+    mapFileName = filename;
+    isRecord = true;
+    mWidget->loadRec((int)foresoundAct->isChecked(), filename);
+}
+
+void MainWindow::recharge()
+{
+    (getMap()->Tom())->property["RMB"] = (getMap()->Tom())->property["RMB"]+50;
+}
+
+void MainWindow::restart()
+{
+    if(isRecord)
+        mWidget->loadRec((int)foresoundAct->isChecked(), mapFileName);
+    else
+        mWidget->loadMap((int)foresoundAct->isChecked(), mapFileName);
 }
 
 void MainWindow::hard(){
@@ -165,7 +196,9 @@ void MainWindow::hard(){
     }
     mediumAct->setChecked(false);
     easyAct->setChecked(false);
-    mWidget->loadMap(":/maps/map/HAHA_8 V2.2 - hard.m++");
+    mapFileName = ":/maps/map/HAHA_8 V2.2 - hard.m++";
+    isRecord = false;
+    mWidget->loadMap((int)foresoundAct->isChecked(), ":/maps/map/HAHA_8 V2.2 - hard.m++");
 }
 
 void MainWindow::medium(){
@@ -176,15 +209,42 @@ void MainWindow::medium(){
     }
     hardAct->setChecked(false);
     easyAct->setChecked(false);
+    mapFileName = ":/maps/map/HAHA_8 V2.2.m++";
+    isRecord = false;
+    mWidget->loadMap((int)foresoundAct->isChecked(), ":/maps/map/HAHA_8 V2.2.m++");
 }
 
-void MainWindow::easy(){}
+void MainWindow::easy()
+{
+    if(!easyAct->isChecked())
+    {
+        easyAct->setChecked(true);
+        return;
+    }
+    hardAct->setChecked(false);
+    mediumAct->setChecked(false);
+    mapFileName = ":/maps/map/HAHA_8 V2.2.m++";
+    isRecord = false;
+    mWidget->loadMap((int)foresoundAct->isChecked(), ":/maps/map/HAHA_8 V2.2.m++");
+}
 
-void MainWindow::property(){}
+void MainWindow::foresound()
+{
+    if(foresoundAct->isChecked())
+        getMap()->foreSoundEnabled = true;
+    else
+        getMap()->foreSoundEnabled = false;
+}
 
-void MainWindow::manual(){}
+void MainWindow::manual()
+{
+    //TODO
+}
 
-void MainWindow::about(){}
+void MainWindow::about()
+{
+    //TODO
+}
 
 EldersMap *MainWindow::getMap()
 {

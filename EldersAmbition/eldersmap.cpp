@@ -33,11 +33,11 @@
 #include <QThread>
 #include <QMutex>
 
-EldersMap::EldersMap()
+EldersMap::EldersMap(int foreSound)
 {
     animateTimer = new QTimer();
 
-    initialize();
+    initialize(foreSound);
 
     mBackSound = new EldersBackSound();
     mBackSound->play(QSound::Infinite);
@@ -61,7 +61,7 @@ void EldersMap::destoryList()
     }*/
 }
 
-void EldersMap::initialize()
+void EldersMap::initialize(int foreSound)
 {
     mTom = new EldersTom(0, 0, 1, this);
     displayList.push_front(mTom);
@@ -69,7 +69,7 @@ void EldersMap::initialize()
     animateFlag = 0;
     eventFlag = 0;
 
-    foreSoundEnabled = 1;
+    foreSoundEnabled = foreSound;
 //    testForeSoundEnabled =5;
 
     property["wisdomEnabled"] = 0;
@@ -84,7 +84,7 @@ void EldersMap::initialize()
                 displayList.push_front(/*inventory[12 * (i - 12) + j] = */new EldersFloor(j, i, 100, this));
 }
 
-bool EldersMap::loadMap(QString fileName)
+bool EldersMap::loadMap(int foreSound, QString fileName)
 {
     if (fileName.isEmpty())
     {
@@ -96,7 +96,7 @@ bool EldersMap::loadMap(QString fileName)
     {
         destoryList();
 
-        initialize();
+        initialize(foreSound);
 
         try
         {
@@ -140,7 +140,7 @@ bool EldersMap::saveRecord(QFile *file)
     return true;
 }
 
-bool EldersMap::loadRecord(QFile *file)
+bool EldersMap::loadRecord(int foreSound, QFile *file)
 {
     if (!file->open(QIODevice::ReadOnly | QIODevice::Text))
         throw "File Cannot Open...";
@@ -149,7 +149,7 @@ bool EldersMap::loadRecord(QFile *file)
 
     destoryList();
 
-    initialize();
+    initialize(foreSound);
 
     /*
     int length = in.readLine().toInt();

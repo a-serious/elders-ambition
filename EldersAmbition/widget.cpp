@@ -19,7 +19,7 @@ Widget::Widget(QWidget *parent)
     //View->setSource(QUrl("qrc:/UI/MainWindowNew.qml"));
     //View->show();
 
-    mMap = new EldersMap();
+    mMap = new EldersMap(1);
 
     mapToLoad = "";
     recToLoad = "";
@@ -36,14 +36,16 @@ void Widget::saveRec(QString filename)
     recToSave = filename;
 }
 
-void Widget::loadRec(QString filename)
+void Widget::loadRec(int foreSound, QString filename)
 {
     recToLoad = filename;
+    foreSoundEnabled = foreSound;
 }
 
-void Widget::loadMap(QString filename)
+void Widget::loadMap(int foreSound, QString filename)
 {
     mapToLoad = filename;
+    foreSoundEnabled = foreSound;
 }
 
 bool loadingFlag = false;
@@ -56,13 +58,13 @@ void Widget::animate()
     if (!mapToLoad.isEmpty())
     {
         loadingFlag = true;
-        if (mMap->loadMap(mapToLoad))
+        if (mMap->loadMap(foreSoundEnabled, mapToLoad))
             mMap->appendPopup("Map Load succeeded.", false);
         else
         {
             EldersExpression::onList.clear();
             EldersExpression::atList.clear();
-            mMap->initialize();
+            mMap->initialize(foreSoundEnabled);
             mMap->appendPopup("Bad Map. Info are shown in the console.", false);
         }
         mapToLoad = "";
@@ -71,13 +73,13 @@ void Widget::animate()
     if (!recToLoad.isEmpty())
     {
         loadingFlag = true;
-        if (mMap->loadRecord(new QFile(recToLoad)))
+        if (mMap->loadRecord(foreSoundEnabled, new QFile(recToLoad)))
             mMap->appendPopup("Record Load succeeded.", false);
         else
         {
             EldersExpression::onList.clear();
             EldersExpression::atList.clear();
-            mMap->initialize();
+            mMap->initialize(foreSoundEnabled);
             mMap->appendPopup("Bad Record. Info are shown in the console.", false);
         }
         recToLoad = "";
@@ -92,7 +94,7 @@ void Widget::animate()
         {
             EldersExpression::onList.clear();
             EldersExpression::atList.clear();
-            mMap->initialize();
+            mMap->initialize(foreSoundEnabled);
             mMap->appendPopup("Bad operation. Info are shown in the console.", false);
         }
         recToSave = "";

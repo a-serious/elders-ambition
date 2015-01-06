@@ -10,7 +10,7 @@
 
 void test(MainWindow *pW)
 {
-    pW->getWidget()->loadMap(":/maps/beta");
+    pW->getWidget()->loadMap(1, ":/maps/map/HAHA_8 V2.2.m++");
 }
 
 int main(int argc, char *argv[])
