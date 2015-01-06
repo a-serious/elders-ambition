@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     setWindowTitle(tr("长者的野望"));
 
+    mapFileName = ":/maps/map/HAHA_8 V2.2.m++";
 
     this->resize(800, 600);
 
