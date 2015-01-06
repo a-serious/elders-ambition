@@ -19,16 +19,33 @@ class MainWindow : public QMainWindow
 
     void createMenus();
     QMenu *fileMenu;
+    QMenu *settingMenu;
+    QMenu *difficultyMenu;
+    QMenu *helpMenu;
 
     QAction *openAct;
     QAction *saveAct;
     QAction *loadAct;
     QAction *exitAct;
 
+    QAction *hardAct;
+    QAction *mediumAct;
+    QAction *easyAct;
+    QAction *propertyAct;
+
+    QAction *manualAct;
+    QAction *aboutAct;
+
 private slots:
     void open();
     void save();
     void load();
+    void hard();
+    void medium();
+    void easy();
+    void property();
+    void manual();
+    void about();
 
 public:
     MainWindow(QWidget *parent = 0);

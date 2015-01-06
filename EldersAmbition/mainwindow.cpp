@@ -13,7 +13,8 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
-    setWindowTitle(tr("Elders Tower"));
+    setWindowTitle(tr("长者的野望"));
+
 
     this->resize(800, 600);
 
@@ -67,38 +68,75 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::createMenus()
 {
-    openAct = new QAction(tr("Load &Map"), this);
-    saveAct = new QAction(tr("&Save record"), this);
-    loadAct = new QAction(tr("L&oad record"), this);
-    exitAct = new QAction(tr("E&xit"), this);
+    openAct = new QAction(tr("读取地图(&M)"), this);
+    saveAct = new QAction(tr("存档(&S)"), this);
+    loadAct = new QAction(tr("读档(&R)"), this);
+    exitAct = new QAction(tr("退出(&E)"), this);
 
-    fileMenu = menuBar()->addMenu(tr("&Elders Tower"));
+    hardAct = new QAction(tr("困难"), this);
+    mediumAct = new QAction(tr("中等"), this);
+    easyAct = new QAction(tr("简单"), this);
+    propertyAct = new QAction(tr("选项(&P)"), this);
+
+    manualAct = new QAction(tr("用户手册(&U)"), this);
+    aboutAct = new QAction(tr("关于(&A)"), this);
+
+    fileMenu = menuBar()->addMenu(tr("文件(&F)"));
+    settingMenu = menuBar()->addMenu(tr("游戏设置(&G)"));
+    helpMenu = menuBar()->addMenu(tr("帮助(&H)"));
+
     fileMenu->addAction(openAct);
     openAct->setShortcut(QKeySequence("Ctrl+m"));
     fileMenu->addSeparator();
     fileMenu->addAction(saveAct);
     saveAct->setShortcut(QKeySequence("Ctrl+s"));
     fileMenu->addAction(loadAct);
-    loadAct->setShortcut(QKeySequence("Ctrl+o"));
+    loadAct->setShortcut(QKeySequence("Ctrl+r"));
     fileMenu->addSeparator();
     fileMenu->addAction(exitAct);
-    exitAct->setShortcut(QKeySequence("Ctrl+w"));
+    exitAct->setShortcut(QKeySequence("Ctrl+e"));
+
+    difficultyMenu = settingMenu->addMenu(tr("选择难度(&D)"));
+    settingMenu->addSeparator();
+    settingMenu->addAction(propertyAct);
+    propertyAct->setShortcut(QKeySequence("Ctrl+p"));
+
+    difficultyMenu->addAction(hardAct);
+    hardAct->setCheckable(true);
+    hardAct->setChecked(false);
+    difficultyMenu->addAction(mediumAct);
+    mediumAct->setCheckable(true);
+    mediumAct->setChecked(true);
+    difficultyMenu->addAction(easyAct);
+    easyAct->setCheckable(true);
+    easyAct->setChecked(false);
+
+    helpMenu->addAction(manualAct);
+    manualAct->setShortcut(QKeySequence("Ctrl+u"));
+    helpMenu->addAction(aboutAct);
+    aboutAct->setShortcut(QKeySequence("Ctrl+a"));
 
     connect(exitAct, SIGNAL(triggered()), this, SLOT(close()));
     connect(openAct, SIGNAL(triggered()), this, SLOT(open()));
     connect(saveAct, SIGNAL(triggered()), this, SLOT(save()));
     connect(loadAct, SIGNAL(triggered()), this, SLOT(load()));
+    connect(hardAct, SIGNAL(triggered()), this, SLOT(hard()));
+    connect(mediumAct, SIGNAL(triggered()), this, SLOT(medium()));
+    connect(easyAct, SIGNAL(triggered()), this, SLOT(easy()));
+    connect(propertyAct, SIGNAL(triggered()), this, SLOT(property()));
+    connect(manualAct, SIGNAL(triggered()), this, SLOT(manual()));
+    connect(aboutAct, SIGNAL(triggered()), this, SLOT(about()));
 }
 
 void MainWindow::open()
 {
-    QString filename = QFileDialog::getOpenFileName(this, tr("Open File"), "", tr("Elders Map++ (*.m++)"));
+    QString filename = QFileDialog::getOpenFileName(this, tr("打开地图文件"), "", tr("Elders Map++ (*.m++)"));
     mWidget->loadMap(filename);
 }
 
 void MainWindow::save()
 {
-    QString filename = QFileDialog::getSaveFileName(this, tr("Open File"), "save0.rec", tr("Elders Record (*.rec)"));
+    QString filename = QFileDialog::getSaveFileName(this, tr("选择保存位置"), "save0.rec", tr("Elders Record (*.rec)"));
     if (filename.isEmpty())
         return;
     try
@@ -113,11 +151,40 @@ void MainWindow::save()
 
 void MainWindow::load()
 {
-    QString filename = QFileDialog::getOpenFileName(this, tr("Open File"), "save0.rec", tr("Elders Record (*.rec)"));
+    QString filename = QFileDialog::getOpenFileName(this, tr("打开存档文件"), "save0.rec", tr("Elders Record (*.rec)"));
     if (filename.isEmpty())
         return;
     mWidget->loadRec(filename);
 }
+
+void MainWindow::hard(){
+    if(!hardAct->isChecked())
+    {
+        hardAct->setChecked(true);
+        return;
+    }
+    mediumAct->setChecked(false);
+    easyAct->setChecked(false);
+    mWidget->loadMap(":/maps/map/HAHA_8 V2.2 - hard.m++");
+}
+
+void MainWindow::medium(){
+    if(!mediumAct->isChecked())
+    {
+        mediumAct->setChecked(true);
+        return;
+    }
+    hardAct->setChecked(false);
+    easyAct->setChecked(false);
+}
+
+void MainWindow::easy(){}
+
+void MainWindow::property(){}
+
+void MainWindow::manual(){}
+
+void MainWindow::about(){}
 
 EldersMap *MainWindow::getMap()
 {
