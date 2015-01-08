@@ -1,82 +1,82 @@
 ﻿enemy_9->health = 2500
-enemy_9->attack = 650
-enemy_9->defend = 500
+enemy_9->attack = 120
+enemy_9->defend = 80
 enemy_9->money = 84
 enemy_9->exp = 75
 //地底小怪
 
 enemy_31->health = 3000
-enemy_31->attack = 750
-enemy_31->defend = 650
+enemy_31->attack = 140
+enemy_31->defend = 100
 enemy_31->money = 250
 enemy_31->exp = 220
 //最终大BOSS
 
 enemy_2->health = 900
-enemy_2->attack = 120
-enemy_2->defend = 100
+enemy_2->attack = 60
+enemy_2->defend = 60
 enemy_2->money = 25
 enemy_2->exp = 25
 //第四层的小BOSS
 
 enemy_3->health = 700
-enemy_3->attack = 60
-enemy_3->defend = 45
+enemy_3->attack = 30
+enemy_3->defend = 27
 enemy_3->money = 15
 enemy_3->exp = 15
 //第五层的小BOSS
 
 enemy_4->health = 800
-enemy_4->attack = 80
-enemy_4->defend = 60
+enemy_4->attack = 40
+enemy_4->defend = 36
 enemy_4->money = 20
 enemy_4->exp = 20
 //第一层的小BOSS
 
 enemy_5->health = 600
-enemy_5->attack = 22
-enemy_5->defend = 15
+enemy_5->attack = 11
+enemy_5->defend = 9
 enemy_5->money = 10
 enemy_5->exp = 10
 //第三层的小BOSS
 
 enemy_10->health = 1100
-enemy_10->attack = 150
-enemy_10->defend = 120
+enemy_10->attack = 75
+enemy_10->defend = 72
 enemy_10->money = 30
 enemy_10->exp = 30
 //第六层的小BOSS
 
 enemy_12->health = 1300
-enemy_12->attack = 220
-enemy_12->defend = 180
+enemy_12->attack = 110
+enemy_12->defend = 108
 enemy_12->money = 40
 enemy_12->exp = 40
 //第八层的小BOSS
 
 enemy_13->health = 1200
-enemy_13->attack = 160
-enemy_13->defend = 130
+enemy_13->attack = 80
+enemy_13->defend = 78
 enemy_13->money = 35
 enemy_13->exp = 35
 //第二层的小BOSS
 
 enemy_15->health = 1000
-enemy_15->attack = 140
-enemy_15->defend = 115
+enemy_15->attack = 70
+enemy_15->defend = 69
 enemy_15->money = 28
 enemy_15->exp = 28
 //第七层的小BOSS
 
 enemy_23->health = 300
-enemy_23->attack = 75
-enemy_23->defend = 45
+enemy_23->attack = 38
+enemy_23->defend = 27
 enemy_23->money = 13
 enemy_23->exp = 10
 
 enemy_27->health = 100
-enemy_27->attack = 20
-enemy_27->defend = 5
+enemy_27->attack = 10
+enemy_27->defend = 3
 enemy_27->money = 3
 enemy_27->exp = 3
 
@@ -87,32 +87,32 @@ enemy_16->money = 45
 enemy_16->exp = 40
 
 enemy_28->health = 75
-enemy_28->attack = 15
-enemy_28->defend = 2
+enemy_28->attack = 8
+enemy_28->defend = 1
 enemy_28->money = 2
 enemy_28->exp = 2
 
 enemy_29->health = 50
-enemy_29->attack = 20
+enemy_29->attack = 10
 enemy_29->defend = 1
 enemy_29->money = 1
 enemy_29->exp = 1
 
 enemy_25->health = 110
-enemy_25->attack = 25
-enemy_25->defend = 5
+enemy_25->attack = 13
+enemy_25->defend = 3
 enemy_25->money = 5
 enemy_25->exp = 4
 
 enemy_14->health = 400
-enemy_14->attack = 90
-enemy_14->defend = 50
+enemy_14->attack = 45
+enemy_14->defend = 30
 enemy_14->money = 15
 enemy_14->exp = 12
 
 enemy_8->health = 125
-enemy_8->attack = 50
-enemy_8->defend = 35
+enemy_8->attack = 25
+enemy_8->defend = 21
 enemy_8->money = 10
 enemy_8->exp = 7
 
@@ -123,14 +123,14 @@ enemy_21->money = 10
 enemy_21->exp = 8
 
 enemy_26->health = 200
-enemy_26->attack = 35
-enemy_26->defend = 10
+enemy_26->attack = 18
+enemy_26->defend = 6
 enemy_26->money = 5
 enemy_26->exp = 5
 
 enemy_20->health = 550
-enemy_20->attack = 130
-enemy_20->defend = 100
+enemy_20->attack = 65
+enemy_20->defend = 60
 enemy_20->money = 22
 enemy_20->exp = 22
 
@@ -141,14 +141,14 @@ enemy_22->money = 20
 enemy_22->exp = 20
 
 enemy_24->health = 150
-enemy_24->attack = 40
-enemy_24->defend = 20
+enemy_24->attack = 20
+enemy_24->defend = 12
 enemy_24->money = 8
 enemy_24->exp = 6
 
 enemy_7->health = 600
-enemy_7->attack = 135
-enemy_7->defend = 105
+enemy_7->attack = 68
+enemy_7->defend = 63
 enemy_7->money = 25
 enemy_7->exp = 25
 
@@ -159,26 +159,26 @@ enemy_17->money = 47
 enemy_17->exp = 45
 
 enemy_18->health = 700
-enemy_18->attack = 140
-enemy_18->defend = 110
+enemy_18->attack = 70
+enemy_18->defend = 66
 enemy_18->money = 28
 enemy_18->exp = 28
 
 enemy_6->health = 500
-enemy_6->attack = 115
-enemy_6->defend = 65
+enemy_6->attack = 58
+enemy_6->defend = 39
 enemy_6->money = 15
 enemy_6->exp = 15
 
 enemy_11->health = 250
-enemy_11->attack = 120
-enemy_11->defend = 70
+enemy_11->attack = 60
+enemy_11->defend = 42
 enemy_11->money = 20
 enemy_11->exp = 18
 
 enemy_19->health = 1300
-enemy_19->attack = 130
-enemy_19->defend = 110
+enemy_19->attack = 65
+enemy_19->defend = 60
 enemy_19->money = 22
 enemy_19->exp = 22
 
