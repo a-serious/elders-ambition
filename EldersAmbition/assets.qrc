@@ -206,6 +206,7 @@
         <file>assets/Images/2.png</file>
         <file>assets/Images/3.png</file>
         <file>assets/Images/backgroundV1.3.jpg</file>
+        <file>assets/Images/1b.png</file>
     </qresource>
     <qresource prefix="/sounds">
         <file>assets/Sounds/1.wav</file>

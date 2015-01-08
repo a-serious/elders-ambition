@@ -26,7 +26,7 @@ private:
     LevelWidget *mLevelWidget;//ymj
     PropertyWidget *mPropertyWidget;//ymj
     ItemWidget *mItemWidget;//ymj
-    ButtonWidget *mButtonWidget;//ymj
+    //ButtonWidget *mButtonWidget;//ymj
 };
 
 #endif // STATUS_H

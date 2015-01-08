@@ -12,7 +12,7 @@ Status::Status(EldersMap *map, QWidget *parent) :
     mLevelWidget = new LevelWidget(map, this);//ymj
     mPropertyWidget = new PropertyWidget(map, this);//ymj
     mItemWidget = new ItemWidget(map, this);//ymj
-    mButtonWidget = new ButtonWidget(this);
+    //mButtonWidget = new ButtonWidget(this);
 
     //levelWidget->setFixedSize(200, 76);
     //propertyWidget->setFixedSize(200, 144);
@@ -43,9 +43,9 @@ Status::Status(EldersMap *map, QWidget *parent) :
     layout->addWidget(mLevelWidget, 0, 0);//ymj
     layout->addWidget(mPropertyWidget, 1, 0);//ymj
     layout->addWidget(mItemWidget, 2, 0);//ymj
-    layout->addWidget(mButtonWidget, 3, 0);
+    //layout->addWidget(mButtonWidget, 3, 0);
 
-    layout->setContentsMargins(0,0,35,50);//ymj
+    layout->setContentsMargins(0,0,35,150);//ymj,left,top,right,bottom
     layout->setSpacing(0);
 
     this->setLayout(layout);//ymj
