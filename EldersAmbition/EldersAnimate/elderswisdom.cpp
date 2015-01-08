@@ -18,6 +18,7 @@ EldersWisdom::~EldersWisdom()
 bool EldersWisdom::paint(QPainter *painter)
 {
     painter->setPen("white");
+    painter->setFont(QFont("黑体", 14));
     cnt--;
     if (wantDelete)
         return false;
@@ -33,7 +34,7 @@ bool EldersWisdom::paint(QPainter *painter)
             painter->drawPixmap(i*50, j*50, *black);
 
     // painter->drawText(0, 20, QString("EldersTom"));
-    int k = 1, l = 1, offset = 20, margin_left = 50, margin_top = 17;
+    int k = 1, l = 1, offset = 30, margin_left = 50, margin_top = 30;
     l++;
     painter->drawText(l*offset + margin_left +4, k*50+margin_top+4, QString("攻击")); l+=2;
     painter->drawText(l*offset + margin_left +4, k*50+margin_top+4, QString("防御")); l+=2;

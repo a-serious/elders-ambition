@@ -6,7 +6,7 @@ EldersPopup::EldersPopup(EldersMap *parent, QString content)
 {
     this->content = content;
     parent->appendSound(":/sounds/popup");
-    background = QPixmap(":/images/chosen");
+    background = QPixmap(":/images/black");
 }
 
 QRect EldersPopup::screen(1 * 50, 4 * 50 + 24, 9 * 50, 50 + 25);
@@ -32,8 +32,8 @@ bool EldersPopup::paint(QPainter *painter)
         painter->setBrush(QBrush(background));
         painter->drawRect(screen);
 
-        painter->setPen("black");
-        painter->setFont(QFont("Arial", 15, 2));
+        painter->setPen("chocolate");
+        painter->setFont(QFont("黑体", 17, 2));
         painter->drawText(screen, Qt::AlignCenter, content);
     }
     else

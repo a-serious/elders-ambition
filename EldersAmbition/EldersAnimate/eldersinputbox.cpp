@@ -41,7 +41,8 @@ bool EldersInputBox::paint(QPainter *painter)
         return false;
 
     painter->setPen("white");
-    int k = 1, l = 2, margin_top = 17;
+    painter->setFont(QFont("黑体", 14));
+    int k = 1, l = 2, margin_top = 27;
     painter->drawPixmap(l*50, k*50, *leftupangle);
     for (l = 3; l <= 7; l++)
         painter->drawPixmap(l*50, k*50, *upedge);
@@ -54,7 +55,7 @@ bool EldersInputBox::paint(QPainter *painter)
         painter->drawPixmap(l*50, k*50, *black);
     painter->drawPixmap(l*50, k*50, *rightedge);
     l = 3;
-    painter->drawText(QRect(QPoint(80 + 16, 48 + 8), QPoint(272 - 16, 96 + 16 - 8)), Qt::AlignVCenter | Qt::TextWordWrap, content);
+    painter->drawText(QRect(QPoint(125 + 25, 75 + 12), QPoint(425 - 25, 150 + 25 - 12)), Qt::AlignVCenter | Qt::TextWordWrap, content);
 
     for (auto i = entries.begin(); i != entries.end(); i++)
     {
