@@ -4,7 +4,7 @@ ItemWidget::ItemWidget(EldersMap *map, QWidget *parent) :
     QWidget(parent)
 {
     mMap = map;
-    setFixedSize(200, 144);
+    setFixedSize(200, 269);
 }
 
 void ItemWidget::animate()
@@ -29,10 +29,10 @@ void ItemWidget::paintEvent(QPaintEvent *)
     int j = 0;
     for (auto i = mMap->Tom()->inventory.begin(); i != mMap->Tom()->inventory.end(); i++)
     {
-        int x = j % 6;
-        int y = j / 6;
+        int x = j % 4;
+        int y = j / 4;
         (**i)["position_x"] = x, (**i)["position_y"] = y;
-        (*i)->x = x * 32 + 3, (*i)->y = y * 32 + 20;//ymj
+        (*i)->x = x * 45 , (*i)->y = y * 45 + 20;//ymj
         (*i)->paint(&painter);
         j++;
     }

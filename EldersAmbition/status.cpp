@@ -33,7 +33,7 @@ Status::Status(EldersMap *map, QWidget *parent) :
 
     mItemWidget->setAutoFillBackground(true); // 这句要加上, 否则可能显示不出背景图.
     QPalette mItemPalette = mItemWidget->palette();
-    mItemPalette.setBrush(QPalette::Window, QBrush(QPixmap(":/images/assets/Images/1.png").scaled(
+    mItemPalette.setBrush(QPalette::Window, QBrush(QPixmap(":/images/assets/Images/1b.png").scaled(
                 mItemWidget->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation))); // 使用平滑的缩放方式
     mItemWidget->setPalette(mItemPalette); // 至此, 已给widget加上了背景图.
     //ymj

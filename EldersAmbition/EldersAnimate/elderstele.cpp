@@ -26,7 +26,7 @@ bool EldersTele::paint(QPainter *painter)
     if (wantDelete)
         return false;
 
-    int offset = 16;
+    int offset = 25;
     for (int i = 1; i < 8; i++)
     {
         painter->drawPixmap(i*50 + offset, 2*50, *wall);
@@ -46,10 +46,10 @@ bool EldersTele::paint(QPainter *painter)
                 painter->drawPixmap(i*50 + offset, j*50, *floor);
 
     painter->setPen("white");
-    painter->setFont(QFont("黑体", 12));
-    painter->drawText(QRect(2*50 + offset, 3*50, 128, 50), Qt::AlignVCenter | Qt::AlignLeft, content);
+    painter->setFont(QFont("黑体", 14));
+    painter->drawText(QRect(2*50 + offset, 3*50, 200, 50), Qt::AlignVCenter | Qt::AlignLeft, content);
 
-    painter->setFont(QFont("黑体", 12, 3));
+    painter->setFont(QFont("黑体", 14, 3));
 
     int k = 1;
     for (int j = 4; j < 8 && k <= parent->Tom()->property["range"].getInt(); j++)
