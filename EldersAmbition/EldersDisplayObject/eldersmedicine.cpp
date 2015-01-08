@@ -53,13 +53,13 @@ bool EldersMedicine::move(EldersMap *map)
 
     QString label = property["label"].getString(), t;
     if (label == "medicine_1")
-        t = "您获得了小血瓶 生命加" + QString::number(property["health"].getInt());
+        t = "您获得了烤串 生命加" + QString::number(property["health"].getInt());
     else if (label == "medicine_2")
-        t = "您获得了大血瓶 生命加" + QString::number(property["health"].getInt());
+        t = "您获得了煎饼 生命加" + QString::number(property["health"].getInt());
     else if (label == "medicine_3")
-        t = "您获得了红宝石 攻击加" + QString::number(property["attack"].getInt()) + "点";
+        t = "您获得了内存 攻击加" + QString::number(property["attack"].getInt()) + "点";
     else if (label == "medicine_4")
-        t = "您获得了蓝宝石 防御加" + QString::number(property["defend"].getInt()) + "点";
+        t = "您获得了CPU 防御加" + QString::number(property["defend"].getInt()) + "点";
     map->appendPopup(t);
 
     return ret;

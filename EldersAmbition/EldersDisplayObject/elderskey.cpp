@@ -36,13 +36,13 @@ bool EldersKey::move(EldersMap *map)
     switch (color)
     {
     case yellow:
-        parent->appendPopup("您获得了一把黄钥匙");
+        parent->appendPopup("您获得了一只滚轮鼠标");
         break;
     case blue:
-        parent->appendPopup("您获得了一把蓝钥匙");
+        parent->appendPopup("您获得了一只光电鼠标");
         break;
     case red:
-        parent->appendPopup("您获得了一把红钥匙");
+        parent->appendPopup("您获得了一只无线鼠标");
         break;
     }
     return ret;
