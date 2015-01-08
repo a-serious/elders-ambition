@@ -9,6 +9,9 @@
 #include <QFontDatabase>
 #include <QDeclarativeView>
 #include <QQuickView>
+#include <QProcess>
+#include <QDebug>
+#include <QDesktopServices>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -239,6 +242,11 @@ void MainWindow::foresound()
 
 void MainWindow::manual()
 {
+    QDesktopServices::openUrl(QUrl("file:///d:/1.pdf"));
+    //QProcess* process = new QProcess();
+    //QString pdf = "start acrord32";
+    //qDebug() << pdf << endl;
+        //process->start(pdf);
     //TODO
 }
 
