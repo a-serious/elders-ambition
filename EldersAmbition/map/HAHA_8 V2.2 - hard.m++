@@ -130,7 +130,7 @@ enemy_26->exp = 5
 
 enemy_20->health = 550
 enemy_20->attack = 130
-enemy_20->defend = 190
+enemy_20->defend = 100
 enemy_20->money = 22
 enemy_20->exp = 22
 

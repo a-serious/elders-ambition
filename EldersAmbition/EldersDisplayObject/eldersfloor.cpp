@@ -5,7 +5,7 @@ EldersFloor::EldersFloor(int x, int y, int level, EldersMap * parent)
 {
     property["label"] = "floor";
     appendClass("floor");
-    pix = new QPixmap(":/images/assets/Images/test50.jpg");
+    pix = new QPixmap(":/images/floor");
 }
 
 EldersFloor::~EldersFloor()

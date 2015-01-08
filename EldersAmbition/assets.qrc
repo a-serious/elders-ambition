@@ -36,69 +36,69 @@
         <file>assets/Images/104.bmp</file>
         <file>assets/Images/107.bmp</file>
         <file>assets/Images/109.bmp</file>
-        <file alias="armour_1">assets/Images/112.bmp</file>
-        <file alias="armour_2">assets/Images/115.bmp</file>
-        <file alias="armour_3">assets/Images/118.bmp</file>
-        <file alias="armour_4">assets/Images/121.bmp</file>
-        <file alias="armour_5">assets/Images/124.bmp</file>
-        <file alias="weapon_5">assets/Images/127.bmp</file>
-        <file alias="weapon_2">assets/Images/130.bmp</file>
-        <file alias="weapon_3">assets/Images/133.bmp</file>
-        <file alias="weapon_4">assets/Images/136.bmp</file>
-        <file alias="weapon_1">assets/Images/139.bmp</file>
+        <file alias="armour_1">assets/Images/112.png</file>
+        <file alias="armour_2">assets/Images/115.png</file>
+        <file alias="armour_3">assets/Images/118.png</file>
+        <file alias="armour_4">assets/Images/121.png</file>
+        <file alias="armour_5">assets/Images/124.png</file>
+        <file alias="weapon_5">assets/Images/127.png</file>
+        <file alias="weapon_2">assets/Images/130.png</file>
+        <file alias="weapon_3">assets/Images/133.png</file>
+        <file alias="weapon_4">assets/Images/136.png</file>
+        <file alias="weapon_1">assets/Images/139.png</file>
         <file alias="merchant_3.2">assets/Images/142.bmp</file>
         <file alias="merchant_3.3">assets/Images/145.bmp</file>
-        <file alias="altwall_1">assets/Images/148.bmp</file>
-        <file alias="altwall_2">assets/Images/152.bmp</file>
+        <file alias="altwall_1">assets/Images/148.png</file>
+        <file alias="altwall_2">assets/Images/152.png</file>
         <file>assets/Images/156.bmp</file>
         <file>assets/Images/160.bmp</file>
         <file>assets/Images/164.bmp</file>
-        <file alias="door_lock">assets/Images/169.bmp</file>
-        <file alias="downstairs">assets/Images/172.bmp</file>
-        <file alias="upstairs">assets/Images/175.bmp</file>
-        <file alias="medicine_2">assets/Images/178.bmp</file>
-        <file alias="medicine_1">assets/Images/181.bmp</file>
-        <file alias="medicine_3">assets/Images/184.bmp</file>
-        <file alias="medicine_4">assets/Images/187.bmp</file>
-        <file alias="key_red">assets/Images/190.bmp</file>
-        <file alias="key_blue">assets/Images/193.bmp</file>
-        <file alias="key_yellow">assets/Images/196.bmp</file>
-        <file alias="door_silver">assets/Images/200.bmp</file>
-        <file alias="door_red">assets/Images/206.bmp</file>
-        <file alias="door_blue">assets/Images/210.bmp</file>
-        <file alias="door_yellow">assets/Images/214.bmp</file>
-        <file alias="wall">assets/Images/218.bmp</file>
-        <file alias="floor">assets/Images/221.bmp</file>
+        <file alias="door_lock">assets/Images/169.png</file>
+        <file alias="downstairs">assets/Images/172.png</file>
+        <file alias="upstairs">assets/Images/175.png</file>
+        <file alias="medicine_2">assets/Images/178.png</file>
+        <file alias="medicine_1">assets/Images/181.png</file>
+        <file alias="medicine_3">assets/Images/184.png</file>
+        <file alias="medicine_4">assets/Images/187.png</file>
+        <file alias="key_red">assets/Images/190.png</file>
+        <file alias="key_blue">assets/Images/193.png</file>
+        <file alias="key_yellow">assets/Images/196.png</file>
+        <file alias="door_silver">assets/Images/200.png</file>
+        <file alias="door_red">assets/Images/206.png</file>
+        <file alias="door_blue">assets/Images/210.png</file>
+        <file alias="door_yellow">assets/Images/214.png</file>
+        <file alias="wall">assets/Images/218.jpg</file>
+        <file alias="floor">assets/Images/221.jpg</file>
         <file alias="enemy_1.0">assets/Images/224.bmp</file>
         <file alias="enemy_1.1">assets/Images/226.bmp</file>
-        <file alias="enemy_2.0">assets/Images/229.bmp</file>
-        <file alias="enemy_2.1">assets/Images/231.bmp</file>
-        <file alias="enemy_3.0">assets/Images/234.bmp</file>
-        <file alias="enemy_3.1">assets/Images/236.bmp</file>
-        <file alias="enemy_4.0">assets/Images/239.bmp</file>
-        <file alias="enemy_4.1">assets/Images/241.bmp</file>
-        <file alias="enemy_5.0">assets/Images/244.bmp</file>
-        <file alias="enemy_5.1">assets/Images/246.bmp</file>
+        <file alias="enemy_2.0">assets/Images/229.png</file>
+        <file alias="enemy_2.1">assets/Images/231.png</file>
+        <file alias="enemy_3.0">assets/Images/234.png</file>
+        <file alias="enemy_3.1">assets/Images/236.png</file>
+        <file alias="enemy_4.0">assets/Images/239.png</file>
+        <file alias="enemy_4.1">assets/Images/241.png</file>
+        <file alias="enemy_5.0">assets/Images/244.png</file>
+        <file alias="enemy_5.1">assets/Images/246.png</file>
         <file alias="enemy_6.0">assets/Images/249.png</file>
         <file alias="enemy_6.1">assets/Images/251.png</file>
         <file alias="enemy_7.0">assets/Images/254.png</file>
         <file alias="enemy_7.1">assets/Images/256.png</file>
         <file alias="enemy_8.0">assets/Images/259.png</file>
         <file alias="enemy_8.1">assets/Images/261.png</file>
-        <file alias="enemy_9.0">assets/Images/264.bmp</file>
-        <file alias="enemy_9.1">assets/Images/266.bmp</file>
-        <file alias="enemy_10.0">assets/Images/269.bmp</file>
-        <file alias="enemy_10.1">assets/Images/271.bmp</file>
+        <file alias="enemy_9.0">assets/Images/264.png</file>
+        <file alias="enemy_9.1">assets/Images/266.png</file>
+        <file alias="enemy_10.0">assets/Images/269.png</file>
+        <file alias="enemy_10.1">assets/Images/271.png</file>
         <file alias="enemy_11.0">assets/Images/274.png</file>
         <file alias="enemy_11.1">assets/Images/276.png</file>
-        <file alias="enemy_12.0">assets/Images/279.bmp</file>
-        <file alias="enemy_12.1">assets/Images/281.bmp</file>
-        <file alias="enemy_13.0">assets/Images/284.bmp</file>
-        <file alias="enemy_13.1">assets/Images/286.bmp</file>
+        <file alias="enemy_12.0">assets/Images/279.png</file>
+        <file alias="enemy_12.1">assets/Images/281.png</file>
+        <file alias="enemy_13.0">assets/Images/284.png</file>
+        <file alias="enemy_13.1">assets/Images/286.png</file>
         <file alias="enemy_14.0">assets/Images/289.png</file>
         <file alias="enemy_14.1">assets/Images/291.png</file>
-        <file alias="enemy_15.0">assets/Images/294.bmp</file>
-        <file alias="enemy_15.1">assets/Images/296.bmp</file>
+        <file alias="enemy_15.0">assets/Images/294.png</file>
+        <file alias="enemy_15.1">assets/Images/296.png</file>
         <file alias="enemy_16.0">assets/Images/299.bmp</file>
         <file alias="enemy_16.1">assets/Images/301.bmp</file>
         <file alias="enemy_17.1">assets/Images/304.bmp</file>
@@ -127,30 +127,20 @@
         <file alias="enemy_28.1">assets/Images/361.png</file>
         <file alias="enemy_29.0">assets/Images/364.png</file>
         <file alias="enemy_29.1">assets/Images/366.png</file>
-        <file alias="coin">assets/Images/369.bmp</file>
+        <file alias="coin">assets/Images/369.png</file>
         <file alias="axe">assets/Images/372.bmp</file>
         <file>assets/Images/375.bmp</file>
-        <file alias="keythree">assets/Images/378.bmp</file>
-        <file alias="teleport">assets/Images/381.bmp</file>
-        <file alias="wit">assets/Images/384.bmp</file>
+        <file alias="keythree">assets/Images/378.png</file>
+        <file alias="teleport">assets/Images/381.png</file>
+        <file alias="wit">assets/Images/384.png</file>
         <file alias="vase">assets/Images/387.bmp</file>
-        <file alias="cross">assets/Images/390.bmp</file>
+        <file alias="cross">assets/Images/390.png</file>
         <file>assets/Images/393.bmp</file>
         <file alias="up3">assets/Images/395.bmp</file>
-        <file alias="upgrade">assets/Images/398.bmp</file>
+        <file alias="upgrade">assets/Images/398.png</file>
         <file>assets/Images/415.bmp</file>
-        <file alias="merchant_4.0">assets/Images/460.bmp</file>
-        <file alias="merchant_4.1">assets/Images/462.bmp</file>
-        <file>assets/Images/469.bmp</file>
-        <file>assets/Images/473.bmp</file>
-        <file>assets/Images/475.bmp</file>
-        <file>assets/Images/477.bmp</file>
-        <file>assets/Images/479.bmp</file>
-        <file>assets/Images/481.bmp</file>
-        <file>assets/Images/483.bmp</file>
-        <file>assets/Images/485.bmp</file>
-        <file>assets/Images/487.bmp</file>
-        <file>assets/Images/489.bmp</file>
+        <file alias="merchant_4.0">assets/Images/460.png</file>
+        <file alias="merchant_4.1">assets/Images/462.png</file>
         <file alias="chosen">assets/Images/569.bmp</file>
         <file alias="merchant_3.0">assets/Images/637.bmp</file>
         <file alias="merchant_3.1">assets/Images/639.bmp</file>
@@ -215,7 +205,6 @@
         <file>assets/Images/1.png</file>
         <file>assets/Images/2.png</file>
         <file>assets/Images/3.png</file>
-        <file>assets/Images/test50.jpg</file>
         <file>assets/Images/backgroundV1.3.jpg</file>
     </qresource>
     <qresource prefix="/sounds">
