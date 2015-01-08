@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     setWindowTitle(tr("长者的野望"));
 
-    mapFileName = ":/maps/map/HAHA_8 V2.2.m++";
+    mapFileName = ":/maps/map/HAHA_8 V2.2 - medium.m++";
 
     this->resize(800, 600);
 
@@ -213,9 +213,9 @@ void MainWindow::medium(){
     }
     hardAct->setChecked(false);
     easyAct->setChecked(false);
-    mapFileName = ":/maps/map/HAHA_8 V2.2.m++";
+    mapFileName = ":/maps/map/HAHA_8 V2.2 - medium.m++";
     isRecord = false;
-    mWidget->loadMap((int)foresoundAct->isChecked(), ":/maps/map/HAHA_8 V2.2.m++");
+    mWidget->loadMap((int)foresoundAct->isChecked(), ":/maps/map/HAHA_8 V2.2 - medium.m++");
 }
 
 void MainWindow::easy()
@@ -227,9 +227,9 @@ void MainWindow::easy()
     }
     hardAct->setChecked(false);
     mediumAct->setChecked(false);
-    mapFileName = ":/maps/map/HAHA_8 V2.2.m++";
+    mapFileName = ":/maps/map/HAHA_8 V2.2 - easy.m++";
     isRecord = false;
-    mWidget->loadMap((int)foresoundAct->isChecked(), ":/maps/map/HAHA_8 V2.2.m++");
+    mWidget->loadMap((int)foresoundAct->isChecked(), ":/maps/map/HAHA_8 V2.2 - easy.m++");
 }
 
 void MainWindow::foresound()

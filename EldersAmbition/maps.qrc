@@ -5,5 +5,7 @@
         <file alias="beta">map/MagicTower21.m++</file>
         <file>map/HAHA_8 V2.2.m++</file>
         <file>map/HAHA_8 V2.2 - hard.m++</file>
+        <file>map/HAHA_8 V2.2 - easy.m++</file>
+        <file>map/HAHA_8 V2.2 - medium.m++</file>
     </qresource>
 </RCC>
