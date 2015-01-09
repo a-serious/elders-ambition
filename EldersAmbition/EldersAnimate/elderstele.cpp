@@ -6,7 +6,7 @@ EldersTele::EldersTele(EldersMap *parent, QString content)
 {
     floor = new QPixmap(":/images/floor");
     wall = new QPixmap(":/images/wall");
-    chosen = new QPixmap(":/images/chosen");
+    chosen = new QPixmap(":/images/black");
     this->content = content;
     int currentLevel = parent->Tom()->property["level"].getInt();
     if (currentLevel <= 0) currentLevel = 1;
