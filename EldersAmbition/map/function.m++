@@ -11,7 +11,7 @@ f.step	w	w	w	w	.	.	.	.	.	.
 .	m_1#m1	m_2	m_3	m_4	f#m4.fra	.	.	.	.	.
 w	w	w	w	w	.	.	.	.	.	.
 .	.	.	.	.	.	.	.	.	.	.
-.	.	.	.	.	.	e_1.c	e_2.c	e_3.c	d_1	up#up0
+.	.	.	.	.	.	e_2.c	e_2.c	e_3.c	d_1	up#up0
 
 at(1)
 down.t0	d_0	.	.	.	w	.	.	.	.	.
@@ -41,7 +41,7 @@ down.t0	d_0	.	.	.	w	.	.	.	.	.
 
 on (#begin)
 {
-	message = "欢迎进入魔塔（请按回车键继续）"
+	message = "欢迎进入长者的野望（请按回车键继续）"
 	message = "下面我来给大家进行功能展示和说明。"
 	message = "【这里的文字是由message功能显示的。message可以阻塞游戏进程，"
 	message = "脚本语言中通过设置message变量的值来调用。】"
