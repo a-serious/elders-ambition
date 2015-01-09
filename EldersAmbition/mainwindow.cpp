@@ -151,6 +151,9 @@ void MainWindow::open()
     QString filename = QFileDialog::getOpenFileName(this, tr("打开地图文件"), "", tr("Elders Map++ (*.m++)"));
     mapFileName = filename;
     isRecord = false;
+    mediumAct->setChecked(false);
+    easyAct->setChecked(false);
+    hardAct->setChecked(false);
     mWidget->loadMap((int)foresoundAct->isChecked(), filename);
 }
 
@@ -176,6 +179,9 @@ void MainWindow::load()
         return;
     mapFileName = filename;
     isRecord = true;
+    mediumAct->setChecked(false);
+    easyAct->setChecked(false);
+    hardAct->setChecked(false);
     mWidget->loadRec((int)foresoundAct->isChecked(), filename);
 }
 
