@@ -18,7 +18,7 @@ void LevelWidget::paintEvent(QPaintEvent *)
     painter.begin(this);
     painter.setRenderHint(QPainter::Antialiasing);
 
-    painter.setFont(QFont("Arial", 15));
+    painter.setFont(QFont("黑体", 15));
 
     painter.drawText(10, 25, QString("严肃的刘小雨同学"));
     //TODO:Need to modify the string as the level change
@@ -27,7 +27,7 @@ void LevelWidget::paintEvent(QPaintEvent *)
     pen.setColor(QColor("yellow"));
     painter.setPen(pen);
 
-    painter.drawText(120, 55, QString("Level ") + QString::number((*mMap->Tom())["level"].getInt()));
+    painter.drawText(110, 55, QString("Level ") + QString::number((*mMap->Tom())["level"].getInt()));
 
     painter.end();
 }

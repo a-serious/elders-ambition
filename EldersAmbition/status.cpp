@@ -63,7 +63,7 @@ void Status::paintEvent(QPaintEvent *)
     painter.begin(this);
     painter.setRenderHint(QPainter::Antialiasing);
 
-    painter.setFont(QFont("Arial", 15));
+    painter.setFont(QFont("黑体", 15));
 
     //painter.drawText(0, 20, QString("EldersTom"));
     //painter.drawText(0, 60, QString("生命: ") + QString::number((*mMap->Tom())["health"].getInt()));

@@ -18,7 +18,7 @@ void PropertyWidget::paintEvent(QPaintEvent *)
     painter.begin(this);
     painter.setRenderHint(QPainter::Antialiasing);
 
-    painter.setFont(QFont("Arial", 10));
+    painter.setFont(QFont("黑体", 10));
 
     QPen pen;
     pen.setColor(QColor("yellow"));
@@ -26,7 +26,7 @@ void PropertyWidget::paintEvent(QPaintEvent *)
 
     painter.drawText(10, 15, QString("当前属性"));
 
-    painter.setFont(QFont("Arial", 11));
+    painter.setFont(QFont("黑体", 11));
 
     pen.setColor(QColor("black"));
     painter.setPen(pen);

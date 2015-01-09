@@ -20,7 +20,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     mapFileName = ":/maps/map/HAHA_8 V2.2 - medium.m++";
 
-    this->resize(800, 600);
+    this->setFixedSize(800, 600);
 
     createMenus();
 

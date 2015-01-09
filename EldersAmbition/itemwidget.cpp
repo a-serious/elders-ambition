@@ -18,7 +18,7 @@ void ItemWidget::paintEvent(QPaintEvent *)
     painter.begin(this);
     painter.setRenderHint(QPainter::Antialiasing);
 
-    painter.setFont(QFont("Arial", 10));
+    painter.setFont(QFont("黑体", 10));
 
     QPen pen;
     pen.setColor(QColor("yellow"));
