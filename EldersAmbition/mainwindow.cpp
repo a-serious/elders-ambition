@@ -248,7 +248,7 @@ void MainWindow::foresound()
 
 void MainWindow::manual()
 {
-    QDesktopServices::openUrl(QUrl("file:///d:/1.pdf"));
+    QDesktopServices::openUrl(QUrl("file:///f:/UserGuide.pdf"));
     //QProcess* process = new QProcess();
     //QString pdf = "start acrord32";
     //qDebug() << pdf << endl;
