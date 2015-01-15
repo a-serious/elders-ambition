@@ -248,7 +248,7 @@ void MainWindow::foresound()
 
 void MainWindow::manual()
 {
-    QDesktopServices::openUrl(QUrl("file:///f:/UserGuide.pdf"));
+    QDesktopServices::openUrl(QUrl("https://github.com/a-serious/elders-ambition/blob/master/EldersAmbition/map/UserGuide.pdf?raw=true"));
     //QProcess* process = new QProcess();
     //QString pdf = "start acrord32";
     //qDebug() << pdf << endl;
@@ -258,7 +258,9 @@ void MainWindow::manual()
 
 void MainWindow::about()
 {
-    //TODO
+    QProcess* process = new QProcess();
+    QString about = "notepad ./map/about.txt";
+    process->start(about);
 }
 
 EldersMap *MainWindow::getMap()
